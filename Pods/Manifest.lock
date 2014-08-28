@@ -1,0 +1,15 @@
+PODS:
+  - WTAZoomNavigationController (1.0.8)
+
+DEPENDENCIES:
+  - WTAZoomNavigationController (from `https://github.com/willowtreeapps/WTAZoomNavigationController.git`, tag `1.0.8`)
+
+EXTERNAL SOURCES:
+  WTAZoomNavigationController:
+    :git: https://github.com/willowtreeapps/WTAZoomNavigationController.git
+    :tag: 1.0.8
+
+SPEC CHECKSUMS:
+  WTAZoomNavigationController: 32c638a7be006d4b9f24daf5413a14987469e881
+
+COCOAPODS: 0.33.1

@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B09643241234F00934A665A /* libPods-VAMUN_Prototype-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */; };
+		D0AFD47319AEC07D00D0716B /* VAMControllerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AFD47019AEC07D00D0716B /* VAMControllerStore.m */; };
+		D0AFD47419AEC07D00D0716B /* VAMVoidController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AFD47219AEC07D00D0716B /* VAMVoidController.m */; };
+		D0BB7FB719A7CEA30025F85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FB619A7CEA30025F85E /* Foundation.framework */; };
+		D0BB7FB919A7CEA30025F85E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FB819A7CEA30025F85E /* CoreGraphics.framework */; };
+		D0BB7FBB19A7CEA30025F85E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FBA19A7CEA30025F85E /* UIKit.framework */; };
+		D0BB7FC119A7CEA30025F85E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0BB7FBF19A7CEA30025F85E /* InfoPlist.strings */; };
+		D0BB7FC319A7CEA30025F85E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FC219A7CEA30025F85E /* main.m */; };
+		D0BB7FC719A7CEA30025F85E /* VAMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FC619A7CEA30025F85E /* VAMAppDelegate.m */; };
+		D0BB7FC919A7CEA30025F85E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0BB7FC819A7CEA30025F85E /* Images.xcassets */; };
+		D0BB7FD019A7CEA30025F85E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FCF19A7CEA30025F85E /* XCTest.framework */; };
+		D0BB7FD119A7CEA30025F85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FB619A7CEA30025F85E /* Foundation.framework */; };
+		D0BB7FD219A7CEA30025F85E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FBA19A7CEA30025F85E /* UIKit.framework */; };
+		D0BB7FDA19A7CEA30025F85E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0BB7FD819A7CEA30025F85E /* InfoPlist.strings */; };
+		D0BB7FDC19A7CEA30025F85E /* VAMUN_Prototype_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FDB19A7CEA30025F85E /* VAMUN_Prototype_iOSTests.m */; };
+		D0BB7FED19A7DA850025F85E /* VAMContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FEB19A7DA850025F85E /* VAMContentViewController.m */; };
+		D0BB7FF119A7DBEF0025F85E /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FF019A7DBEF0025F85E /* UIColor+Theme.m */; };
+		D0BB7FF519A7DDB30025F85E /* VAMLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FF319A7DDB30025F85E /* VAMLeftViewController.m */; };
+		D0BB7FF619A7DDB30025F85E /* VAMLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0BB7FF419A7DDB30025F85E /* VAMLeftViewController.xib */; };
+		D0BB7FF919A7E80D0025F85E /* VAMTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB7FF819A7E80D0025F85E /* VAMTheme.m */; };
+		D0BB7FFD19A8FBF50025F85E /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB7FFC19A8FBF50025F85E /* Map_Storyboard.storyboard */; };
+		D0BB800119A8FCD50025F85E /* VAMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB800019A8FCD50025F85E /* VAMMapViewController.m */; };
+		D0BB800419A906300025F85E /* Home_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800319A906300025F85E /* Home_Storyboard.storyboard */; };
+		D0BB800619A906410025F85E /* Committees_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800519A906400025F85E /* Committees_Storyboard.storyboard */; };
+		D0BB800819A906510025F85E /* Merchandise_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800719A906510025F85E /* Merchandise_Storyboard.storyboard */; };
+		D0BB800A19A9065E0025F85E /* Charity_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800919A9065E0025F85E /* Charity_Storyboard.storyboard */; };
+		D0BB800C19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800B19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard */; };
+		D0BB800E19A906890025F85E /* Contact_Info_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800D19A906890025F85E /* Contact_Info_Storyboard.storyboard */; };
+		D0BB801019A906BD0025F85E /* Food_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0BB800F19A906BD0025F85E /* Food_Storyboard.storyboard */; };
+		D0BB801319A908A80025F85E /* VAMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB801219A908A80025F85E /* VAMHomeViewController.m */; };
+		D0BB801619A908BC0025F85E /* VAMCommitteesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB801519A908BC0025F85E /* VAMCommitteesViewController.m */; };
+		D0BB801919A908CE0025F85E /* VAMFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB801819A908CE0025F85E /* VAMFoodViewController.m */; };
+		D0BB801C19A908E60025F85E /* VAMMerchandiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB801B19A908E60025F85E /* VAMMerchandiseViewController.m */; };
+		D0BB801F19A908F70025F85E /* VAMCharityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB801E19A908F70025F85E /* VAMCharityViewController.m */; };
+		D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB802119A909130025F85E /* VAMWebViewController.m */; };
+		D0BB802519A909200025F85E /* VAMContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB802419A909200025F85E /* VAMContactViewController.m */; };
+		D0BB803019A90BBC0025F85E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB802F19A90BBC0025F85E /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0BB7FD319A7CEA30025F85E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0BB7FAB19A7CEA30025F85E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0BB7FB219A7CEA30025F85E;
+			remoteInfo = "VAMUN_Prototype-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11394DBE418A46A892548680 /* Pods-VAMUN_Prototype-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VAMUN_Prototype-iOS.xcconfig"; path = "Pods/Pods-VAMUN_Prototype-iOS.xcconfig"; sourceTree = "<group>"; };
+		D0AFD46F19AEC07D00D0716B /* VAMControllerStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMControllerStore.h; path = "VAMUN_Prototype-iOS/VAMControllerStore.h"; sourceTree = "<group>"; };
+		D0AFD47019AEC07D00D0716B /* VAMControllerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMControllerStore.m; path = "VAMUN_Prototype-iOS/VAMControllerStore.m"; sourceTree = "<group>"; };
+		D0AFD47119AEC07D00D0716B /* VAMVoidController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMVoidController.h; path = "VAMUN_Prototype-iOS/VAMVoidController.h"; sourceTree = "<group>"; };
+		D0AFD47219AEC07D00D0716B /* VAMVoidController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMVoidController.m; path = "VAMUN_Prototype-iOS/VAMVoidController.m"; sourceTree = "<group>"; };
+		D0BB7FB319A7CEA30025F85E /* VAMUN_Prototype-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VAMUN_Prototype-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BB7FB619A7CEA30025F85E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0BB7FB819A7CEA30025F85E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0BB7FBA19A7CEA30025F85E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0BB7FBE19A7CEA30025F85E /* VAMUN_Prototype-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VAMUN_Prototype-iOS-Info.plist"; sourceTree = "<group>"; };
+		D0BB7FC019A7CEA30025F85E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0BB7FC219A7CEA30025F85E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0BB7FC419A7CEA30025F85E /* VAMUN_Prototype-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VAMUN_Prototype-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		D0BB7FC519A7CEA30025F85E /* VAMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAMAppDelegate.h; sourceTree = "<group>"; };
+		D0BB7FC619A7CEA30025F85E /* VAMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAMAppDelegate.m; sourceTree = "<group>"; };
+		D0BB7FC819A7CEA30025F85E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0BB7FCE19A7CEA30025F85E /* VAMUN_Prototype-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VAMUN_Prototype-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0BB7FCF19A7CEA30025F85E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0BB7FD719A7CEA30025F85E /* VAMUN_Prototype-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VAMUN_Prototype-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		D0BB7FD919A7CEA30025F85E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0BB7FDB19A7CEA30025F85E /* VAMUN_Prototype_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAMUN_Prototype_iOSTests.m; sourceTree = "<group>"; };
+		D0BB7FEA19A7DA850025F85E /* VAMContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMContentViewController.h; sourceTree = "<group>"; };
+		D0BB7FEB19A7DA850025F85E /* VAMContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMContentViewController.m; sourceTree = "<group>"; };
+		D0BB7FEF19A7DBEF0025F85E /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		D0BB7FF019A7DBEF0025F85E /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		D0BB7FF219A7DDB30025F85E /* VAMLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMLeftViewController.h; sourceTree = "<group>"; };
+		D0BB7FF319A7DDB30025F85E /* VAMLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMLeftViewController.m; sourceTree = "<group>"; };
+		D0BB7FF419A7DDB30025F85E /* VAMLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMLeftViewController.xib; sourceTree = "<group>"; };
+		D0BB7FF719A7E80D0025F85E /* VAMTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMTheme.h; sourceTree = "<group>"; };
+		D0BB7FF819A7E80D0025F85E /* VAMTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMTheme.m; sourceTree = "<group>"; };
+		D0BB7FFC19A8FBF50025F85E /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB7FFF19A8FCD50025F85E /* VAMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMMapViewController.h; sourceTree = "<group>"; };
+		D0BB800019A8FCD50025F85E /* VAMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMMapViewController.m; sourceTree = "<group>"; };
+		D0BB800319A906300025F85E /* Home_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800519A906400025F85E /* Committees_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Committees_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800719A906510025F85E /* Merchandise_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Merchandise_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800919A9065E0025F85E /* Charity_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Charity_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800B19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VAMUN_Web_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800D19A906890025F85E /* Contact_Info_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contact_Info_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB800F19A906BD0025F85E /* Food_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Food_Storyboard.storyboard; sourceTree = "<group>"; };
+		D0BB801119A908A80025F85E /* VAMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMHomeViewController.h; sourceTree = "<group>"; };
+		D0BB801219A908A80025F85E /* VAMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMHomeViewController.m; sourceTree = "<group>"; };
+		D0BB801419A908BC0025F85E /* VAMCommitteesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMCommitteesViewController.h; sourceTree = "<group>"; };
+		D0BB801519A908BC0025F85E /* VAMCommitteesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMCommitteesViewController.m; sourceTree = "<group>"; };
+		D0BB801719A908CE0025F85E /* VAMFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMFoodViewController.h; sourceTree = "<group>"; };
+		D0BB801819A908CE0025F85E /* VAMFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMFoodViewController.m; sourceTree = "<group>"; };
+		D0BB801A19A908E60025F85E /* VAMMerchandiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMMerchandiseViewController.h; sourceTree = "<group>"; };
+		D0BB801B19A908E60025F85E /* VAMMerchandiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMMerchandiseViewController.m; sourceTree = "<group>"; };
+		D0BB801D19A908F70025F85E /* VAMCharityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMCharityViewController.h; sourceTree = "<group>"; };
+		D0BB801E19A908F70025F85E /* VAMCharityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMCharityViewController.m; sourceTree = "<group>"; };
+		D0BB802019A909130025F85E /* VAMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMWebViewController.h; sourceTree = "<group>"; };
+		D0BB802119A909130025F85E /* VAMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMWebViewController.m; sourceTree = "<group>"; };
+		D0BB802319A909200025F85E /* VAMContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMContactViewController.h; sourceTree = "<group>"; };
+		D0BB802419A909200025F85E /* VAMContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMContactViewController.m; sourceTree = "<group>"; };
+		D0BB802F19A90BBC0025F85E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0BB7FB019A7CEA30025F85E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB803019A90BBC0025F85E /* MapKit.framework in Frameworks */,
+				D0BB7FB919A7CEA30025F85E /* CoreGraphics.framework in Frameworks */,
+				D0BB7FBB19A7CEA30025F85E /* UIKit.framework in Frameworks */,
+				D0BB7FB719A7CEA30025F85E /* Foundation.framework in Frameworks */,
+				9B09643241234F00934A665A /* libPods-VAMUN_Prototype-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0BB7FCB19A7CEA30025F85E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB7FD019A7CEA30025F85E /* XCTest.framework in Frameworks */,
+				D0BB7FD219A7CEA30025F85E /* UIKit.framework in Frameworks */,
+				D0BB7FD119A7CEA30025F85E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0AFD46719AD660B00D0716B /* Controller Store */ = {
+			isa = PBXGroup;
+			children = (
+				D0AFD46F19AEC07D00D0716B /* VAMControllerStore.h */,
+				D0AFD47019AEC07D00D0716B /* VAMControllerStore.m */,
+				D0AFD47119AEC07D00D0716B /* VAMVoidController.h */,
+				D0AFD47219AEC07D00D0716B /* VAMVoidController.m */,
+			);
+			name = "Controller Store";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D0BB7FAA19A7CEA30025F85E = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FBC19A7CEA30025F85E /* VAMUN_Prototype-iOS */,
+				D0BB7FD519A7CEA30025F85E /* VAMUN_Prototype-iOSTests */,
+				D0BB7FB519A7CEA30025F85E /* Frameworks */,
+				D0BB7FB419A7CEA30025F85E /* Products */,
+				11394DBE418A46A892548680 /* Pods-VAMUN_Prototype-iOS.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		D0BB7FB419A7CEA30025F85E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FB319A7CEA30025F85E /* VAMUN_Prototype-iOS.app */,
+				D0BB7FCE19A7CEA30025F85E /* VAMUN_Prototype-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0BB7FB519A7CEA30025F85E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB802F19A90BBC0025F85E /* MapKit.framework */,
+				D0BB7FB619A7CEA30025F85E /* Foundation.framework */,
+				D0BB7FB819A7CEA30025F85E /* CoreGraphics.framework */,
+				D0BB7FBA19A7CEA30025F85E /* UIKit.framework */,
+				D0BB7FCF19A7CEA30025F85E /* XCTest.framework */,
+				FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0BB7FBC19A7CEA30025F85E /* VAMUN_Prototype-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D0AFD46719AD660B00D0716B /* Controller Store */,
+				D0BB7FFA19A8F4D00025F85E /* Theme */,
+				D0BB7FFB19A8F4E00025F85E /* Delegate */,
+				D0BB802619A909260025F85E /* Home */,
+				D0BB802719A9092D0025F85E /* Committees */,
+				D0BB800219A8FCDB0025F85E /* Map */,
+				D0BB802819A9093B0025F85E /* Food */,
+				D0BB802919A909450025F85E /* Merchandise */,
+				D0BB802A19A9094D0025F85E /* Charity */,
+				D0BB802B19A909540025F85E /* Web */,
+				D0BB802C19A9095A0025F85E /* Contact */,
+				D0BB802E19A90A9A0025F85E /* Left View Controller */,
+				D0BB802D19A90A8A0025F85E /* ContentViewController */,
+				D0BB7FFE19A8FBFA0025F85E /* Storyboards */,
+				D0BB7FC819A7CEA30025F85E /* Images.xcassets */,
+				D0BB7FBD19A7CEA30025F85E /* Supporting Files */,
+			);
+			path = "VAMUN_Prototype-iOS";
+			sourceTree = "<group>";
+		};
+		D0BB7FBD19A7CEA30025F85E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FBE19A7CEA30025F85E /* VAMUN_Prototype-iOS-Info.plist */,
+				D0BB7FBF19A7CEA30025F85E /* InfoPlist.strings */,
+				D0BB7FC219A7CEA30025F85E /* main.m */,
+				D0BB7FC419A7CEA30025F85E /* VAMUN_Prototype-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0BB7FD519A7CEA30025F85E /* VAMUN_Prototype-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FDB19A7CEA30025F85E /* VAMUN_Prototype_iOSTests.m */,
+				D0BB7FD619A7CEA30025F85E /* Supporting Files */,
+			);
+			path = "VAMUN_Prototype-iOSTests";
+			sourceTree = "<group>";
+		};
+		D0BB7FD619A7CEA30025F85E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FD719A7CEA30025F85E /* VAMUN_Prototype-iOSTests-Info.plist */,
+				D0BB7FD819A7CEA30025F85E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0BB7FFA19A8F4D00025F85E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FF719A7E80D0025F85E /* VAMTheme.h */,
+				D0BB7FF819A7E80D0025F85E /* VAMTheme.m */,
+				D0BB7FEF19A7DBEF0025F85E /* UIColor+Theme.h */,
+				D0BB7FF019A7DBEF0025F85E /* UIColor+Theme.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		D0BB7FFB19A8F4E00025F85E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FC519A7CEA30025F85E /* VAMAppDelegate.h */,
+				D0BB7FC619A7CEA30025F85E /* VAMAppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		D0BB7FFE19A8FBFA0025F85E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB800319A906300025F85E /* Home_Storyboard.storyboard */,
+				D0BB800519A906400025F85E /* Committees_Storyboard.storyboard */,
+				D0BB7FFC19A8FBF50025F85E /* Map_Storyboard.storyboard */,
+				D0BB800F19A906BD0025F85E /* Food_Storyboard.storyboard */,
+				D0BB800719A906510025F85E /* Merchandise_Storyboard.storyboard */,
+				D0BB800919A9065E0025F85E /* Charity_Storyboard.storyboard */,
+				D0BB800B19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard */,
+				D0BB800D19A906890025F85E /* Contact_Info_Storyboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D0BB800219A8FCDB0025F85E /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FFF19A8FCD50025F85E /* VAMMapViewController.h */,
+				D0BB800019A8FCD50025F85E /* VAMMapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		D0BB802619A909260025F85E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB801119A908A80025F85E /* VAMHomeViewController.h */,
+				D0BB801219A908A80025F85E /* VAMHomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		D0BB802719A9092D0025F85E /* Committees */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB801419A908BC0025F85E /* VAMCommitteesViewController.h */,
+				D0BB801519A908BC0025F85E /* VAMCommitteesViewController.m */,
+			);
+			name = Committees;
+			sourceTree = "<group>";
+		};
+		D0BB802819A9093B0025F85E /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB801719A908CE0025F85E /* VAMFoodViewController.h */,
+				D0BB801819A908CE0025F85E /* VAMFoodViewController.m */,
+			);
+			name = Food;
+			sourceTree = "<group>";
+		};
+		D0BB802919A909450025F85E /* Merchandise */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB801A19A908E60025F85E /* VAMMerchandiseViewController.h */,
+				D0BB801B19A908E60025F85E /* VAMMerchandiseViewController.m */,
+			);
+			name = Merchandise;
+			sourceTree = "<group>";
+		};
+		D0BB802A19A9094D0025F85E /* Charity */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB801D19A908F70025F85E /* VAMCharityViewController.h */,
+				D0BB801E19A908F70025F85E /* VAMCharityViewController.m */,
+			);
+			name = Charity;
+			sourceTree = "<group>";
+		};
+		D0BB802B19A909540025F85E /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB802019A909130025F85E /* VAMWebViewController.h */,
+				D0BB802119A909130025F85E /* VAMWebViewController.m */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		D0BB802C19A9095A0025F85E /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB802319A909200025F85E /* VAMContactViewController.h */,
+				D0BB802419A909200025F85E /* VAMContactViewController.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		D0BB802D19A90A8A0025F85E /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FEA19A7DA850025F85E /* VAMContentViewController.h */,
+				D0BB7FEB19A7DA850025F85E /* VAMContentViewController.m */,
+			);
+			name = ContentViewController;
+			sourceTree = "<group>";
+		};
+		D0BB802E19A90A9A0025F85E /* Left View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0BB7FF219A7DDB30025F85E /* VAMLeftViewController.h */,
+				D0BB7FF319A7DDB30025F85E /* VAMLeftViewController.m */,
+				D0BB7FF419A7DDB30025F85E /* VAMLeftViewController.xib */,
+			);
+			name = "Left View Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0BB7FB219A7CEA30025F85E /* VAMUN_Prototype-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0BB7FDF19A7CEA30025F85E /* Build configuration list for PBXNativeTarget "VAMUN_Prototype-iOS" */;
+			buildPhases = (
+				B14F5AC5C278423FAA78B4EF /* Check Pods Manifest.lock */,
+				D0BB7FAF19A7CEA30025F85E /* Sources */,
+				D0BB7FB019A7CEA30025F85E /* Frameworks */,
+				D0BB7FB119A7CEA30025F85E /* Resources */,
+				4E1822B8B7304B599F41878D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VAMUN_Prototype-iOS";
+			productName = "VAMUN_Prototype-iOS";
+			productReference = D0BB7FB319A7CEA30025F85E /* VAMUN_Prototype-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0BB7FCD19A7CEA30025F85E /* VAMUN_Prototype-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0BB7FE219A7CEA30025F85E /* Build configuration list for PBXNativeTarget "VAMUN_Prototype-iOSTests" */;
+			buildPhases = (
+				D0BB7FCA19A7CEA30025F85E /* Sources */,
+				D0BB7FCB19A7CEA30025F85E /* Frameworks */,
+				D0BB7FCC19A7CEA30025F85E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0BB7FD419A7CEA30025F85E /* PBXTargetDependency */,
+			);
+			name = "VAMUN_Prototype-iOSTests";
+			productName = "VAMUN_Prototype-iOSTests";
+			productReference = D0BB7FCE19A7CEA30025F85E /* VAMUN_Prototype-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0BB7FAB19A7CEA30025F85E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VAM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = hooapps;
+				TargetAttributes = {
+					D0BB7FCD19A7CEA30025F85E = {
+						TestTargetID = D0BB7FB219A7CEA30025F85E;
+					};
+				};
+			};
+			buildConfigurationList = D0BB7FAE19A7CEA30025F85E /* Build configuration list for PBXProject "VAMUN_Prototype-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D0BB7FAA19A7CEA30025F85E;
+			productRefGroup = D0BB7FB419A7CEA30025F85E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0BB7FB219A7CEA30025F85E /* VAMUN_Prototype-iOS */,
+				D0BB7FCD19A7CEA30025F85E /* VAMUN_Prototype-iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0BB7FB119A7CEA30025F85E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB7FFD19A8FBF50025F85E /* Map_Storyboard.storyboard in Resources */,
+				D0BB801019A906BD0025F85E /* Food_Storyboard.storyboard in Resources */,
+				D0BB800819A906510025F85E /* Merchandise_Storyboard.storyboard in Resources */,
+				D0BB7FF619A7DDB30025F85E /* VAMLeftViewController.xib in Resources */,
+				D0BB800A19A9065E0025F85E /* Charity_Storyboard.storyboard in Resources */,
+				D0BB800419A906300025F85E /* Home_Storyboard.storyboard in Resources */,
+				D0BB800E19A906890025F85E /* Contact_Info_Storyboard.storyboard in Resources */,
+				D0BB7FC119A7CEA30025F85E /* InfoPlist.strings in Resources */,
+				D0BB800619A906410025F85E /* Committees_Storyboard.storyboard in Resources */,
+				D0BB7FC919A7CEA30025F85E /* Images.xcassets in Resources */,
+				D0BB800C19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0BB7FCC19A7CEA30025F85E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB7FDA19A7CEA30025F85E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E1822B8B7304B599F41878D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-VAMUN_Prototype-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B14F5AC5C278423FAA78B4EF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0BB7FAF19A7CEA30025F85E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB7FF919A7E80D0025F85E /* VAMTheme.m in Sources */,
+				D0BB7FF119A7DBEF0025F85E /* UIColor+Theme.m in Sources */,
+				D0BB800119A8FCD50025F85E /* VAMMapViewController.m in Sources */,
+				D0BB7FC319A7CEA30025F85E /* main.m in Sources */,
+				D0BB802519A909200025F85E /* VAMContactViewController.m in Sources */,
+				D0BB801F19A908F70025F85E /* VAMCharityViewController.m in Sources */,
+				D0BB801619A908BC0025F85E /* VAMCommitteesViewController.m in Sources */,
+				D0BB7FF519A7DDB30025F85E /* VAMLeftViewController.m in Sources */,
+				D0AFD47419AEC07D00D0716B /* VAMVoidController.m in Sources */,
+				D0BB7FC719A7CEA30025F85E /* VAMAppDelegate.m in Sources */,
+				D0AFD47319AEC07D00D0716B /* VAMControllerStore.m in Sources */,
+				D0BB801319A908A80025F85E /* VAMHomeViewController.m in Sources */,
+				D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */,
+				D0BB801C19A908E60025F85E /* VAMMerchandiseViewController.m in Sources */,
+				D0BB7FED19A7DA850025F85E /* VAMContentViewController.m in Sources */,
+				D0BB801919A908CE0025F85E /* VAMFoodViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0BB7FCA19A7CEA30025F85E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BB7FDC19A7CEA30025F85E /* VAMUN_Prototype_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0BB7FD419A7CEA30025F85E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0BB7FB219A7CEA30025F85E /* VAMUN_Prototype-iOS */;
+			targetProxy = D0BB7FD319A7CEA30025F85E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0BB7FBF19A7CEA30025F85E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0BB7FC019A7CEA30025F85E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0BB7FD819A7CEA30025F85E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0BB7FD919A7CEA30025F85E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0BB7FDD19A7CEA30025F85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0BB7FDE19A7CEA30025F85E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0BB7FE019A7CEA30025F85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11394DBE418A46A892548680 /* Pods-VAMUN_Prototype-iOS.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
+				INFOPLIST_FILE = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0BB7FE119A7CEA30025F85E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11394DBE418A46A892548680 /* Pods-VAMUN_Prototype-iOS.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
+				INFOPLIST_FILE = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0BB7FE319A7CEA30025F85E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VAMUN_Prototype-iOS.app/VAMUN_Prototype-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VAMUN_Prototype-iOSTests/VAMUN_Prototype-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0BB7FE419A7CEA30025F85E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VAMUN_Prototype-iOS.app/VAMUN_Prototype-iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
+				INFOPLIST_FILE = "VAMUN_Prototype-iOSTests/VAMUN_Prototype-iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0BB7FAE19A7CEA30025F85E /* Build configuration list for PBXProject "VAMUN_Prototype-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BB7FDD19A7CEA30025F85E /* Debug */,
+				D0BB7FDE19A7CEA30025F85E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0BB7FDF19A7CEA30025F85E /* Build configuration list for PBXNativeTarget "VAMUN_Prototype-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BB7FE019A7CEA30025F85E /* Debug */,
+				D0BB7FE119A7CEA30025F85E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0BB7FE219A7CEA30025F85E /* Build configuration list for PBXNativeTarget "VAMUN_Prototype-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0BB7FE319A7CEA30025F85E /* Debug */,
+				D0BB7FE419A7CEA30025F85E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0BB7FAB19A7CEA30025F85E /* Project object */;
+}

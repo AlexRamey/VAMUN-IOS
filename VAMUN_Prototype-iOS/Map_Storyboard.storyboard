@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iaU-GG-aFu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qH7-vQ-SAd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="iaU-GG-aFu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xtp-l4-uYE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ilq-Zj-aWa" kind="relationship" relationship="rootViewController" id="TOc-Fy-SMl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSl-ih-ha6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59" y="-101"/>
+        </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="YLs-qX-xvK">
+            <objects>
+                <viewController storyboardIdentifier="VAMMapViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ilq-Zj-aWa" customClass="VAMMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vNJ-5G-frs"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ev-50-fey"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7OP-5c-I1J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-pE-zB5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ilq-Zj-aWa" id="Lc3-63-xju"/>
+                                </connections>
+                            </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1og-hj-UQh">
+                                <rect key="frame" x="150" y="306" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="16J-2z-R6B"/>
+                                    <constraint firstAttribute="height" constant="20" id="bRL-al-4xQ"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dg3-pE-zB5" secondAttribute="trailing" id="0PB-DW-PSR"/>
+                            <constraint firstItem="dg3-pE-zB5" firstAttribute="top" secondItem="vNJ-5G-frs" secondAttribute="bottom" id="K9E-F8-W9G"/>
+                            <constraint firstItem="dg3-pE-zB5" firstAttribute="leading" secondItem="7OP-5c-I1J" secondAttribute="leading" id="Khn-eQ-303"/>
+                            <constraint firstItem="dg3-pE-zB5" firstAttribute="centerY" secondItem="1og-hj-UQh" secondAttribute="centerY" id="NTt-kT-BYH"/>
+                            <constraint firstItem="dg3-pE-zB5" firstAttribute="centerX" secondItem="1og-hj-UQh" secondAttribute="centerX" id="Z8O-EJ-EeB"/>
+                            <constraint firstItem="2ev-50-fey" firstAttribute="top" secondItem="dg3-pE-zB5" secondAttribute="bottom" id="g9s-fD-ara"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="KwP-yZ-Kvp"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1og-hj-UQh" id="j6M-2I-hmV"/>
+                        <outlet property="mapView" destination="dg3-pE-zB5" id="8I0-WC-tRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwV-00-HFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-101"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

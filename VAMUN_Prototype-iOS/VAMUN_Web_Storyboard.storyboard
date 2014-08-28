@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="703-4E-OfP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pxz-SB-0ej">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="703-4E-OfP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m8h-Nw-Bqn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="n2E-rR-1qA" kind="relationship" relationship="rootViewController" id="qOh-RQ-GOo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXT-BN-Fxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-405" y="-39"/>
+        </scene>
+        <!--Web View Controller - VAMUN Web-->
+        <scene sceneID="EBr-HF-TRt">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="n2E-rR-1qA" customClass="VAMWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dD7-BQ-KWn"/>
+                        <viewControllerLayoutGuide type="bottom" id="yoe-S2-ncP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3bq-ue-TCN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ymm-Rk-gAJ">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lbp-vL-BvG">
+                                <rect key="frame" x="150" y="328" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="SL4-4j-vXP"/>
+                                    <constraint firstAttribute="width" constant="20" id="d4E-ZK-SB1"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mcE-EN-S1d">
+                                <rect key="frame" x="20" y="72" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="vE0-4g-67t"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="sc_facebook"/>
+                                    <segment title="" image="sc_twitter"/>
+                                    <segment title="UVA-IRO"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectionMade:" destination="n2E-rR-1qA" eventType="valueChanged" id="xqB-Yv-6cS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mcE-EN-S1d" secondAttribute="trailing" constant="20" id="3er-J6-PFj"/>
+                            <constraint firstItem="Ymm-Rk-gAJ" firstAttribute="top" secondItem="mcE-EN-S1d" secondAttribute="bottom" constant="8" id="7nT-Lh-p0f"/>
+                            <constraint firstItem="yoe-S2-ncP" firstAttribute="top" secondItem="Ymm-Rk-gAJ" secondAttribute="bottom" id="HKN-Ek-EBh"/>
+                            <constraint firstItem="lbp-vL-BvG" firstAttribute="centerY" secondItem="Ymm-Rk-gAJ" secondAttribute="centerY" id="Ldh-Qd-7Ve"/>
+                            <constraint firstItem="Ymm-Rk-gAJ" firstAttribute="leading" secondItem="3bq-ue-TCN" secondAttribute="leading" id="QV4-fC-ecR"/>
+                            <constraint firstItem="mcE-EN-S1d" firstAttribute="leading" secondItem="3bq-ue-TCN" secondAttribute="leading" constant="20" id="ToK-oy-35A"/>
+                            <constraint firstItem="lbp-vL-BvG" firstAttribute="centerX" secondItem="Ymm-Rk-gAJ" secondAttribute="centerX" id="V4e-de-f3D"/>
+                            <constraint firstAttribute="trailing" secondItem="Ymm-Rk-gAJ" secondAttribute="trailing" id="a1L-ak-zIF"/>
+                            <constraint firstItem="mcE-EN-S1d" firstAttribute="top" secondItem="dD7-BQ-KWn" secondAttribute="bottom" constant="8" id="v96-3b-3b8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="VAMUN Web" id="YiQ-ar-dBV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ckg-5g-tKt">
+                            <connections>
+                                <action selector="refresh:" destination="n2E-rR-1qA" id="sMg-1B-7nt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lbp-vL-BvG" id="gdT-4S-xWP"/>
+                        <outlet property="segmentedControl" destination="mcE-EN-S1d" id="Lgm-gD-yZ0"/>
+                        <outlet property="webView" destination="Ymm-Rk-gAJ" id="9rj-8T-0PC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8Q-2k-S1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="-39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sc_facebook" width="25" height="25"/>
+        <image name="sc_twitter" width="25" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
