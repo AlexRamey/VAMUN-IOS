@@ -5,6 +5,8 @@ target "VAMUN_Prototype-iOS" do
 
 pod 'WTAZoomNavigationController', :git => "https://github.com/willowtreeapps/WTAZoomNavigationController.git", :tag => '1.0.8'
 
+pod "AFNetworking", "~> 2.0"
+
 end
 
 target "VAMUN_Prototype-iOSTests" do

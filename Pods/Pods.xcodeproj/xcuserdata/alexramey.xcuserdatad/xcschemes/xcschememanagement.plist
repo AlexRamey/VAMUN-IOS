@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-VAMUN_Prototype-iOS-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-VAMUN_Prototype-iOS-WTAZoomNavigationController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>124509418AC3422BA2FEC273</key>
+		<key>8055D0847087443AB8C949EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E231614459B44F6810BD0E4</key>
+		<key>AA360E7085F146DAB48901AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DAB6655F6F4345498B052160</key>
 		<dict>
 			<key>primary</key>
 			<true/>

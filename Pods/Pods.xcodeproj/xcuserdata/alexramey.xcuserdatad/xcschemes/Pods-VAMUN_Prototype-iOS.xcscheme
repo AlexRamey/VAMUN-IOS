@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E231614459B44F6810BD0E4"
+               BlueprintIdentifier = "8055D0847087443AB8C949EC"
                BuildableName = "libPods-VAMUN_Prototype-iOS.a"
                BlueprintName = "Pods-VAMUN_Prototype-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">

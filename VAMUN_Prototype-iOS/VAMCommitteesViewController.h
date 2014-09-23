@@ -8,6 +8,15 @@
 
 #import "VAMContentViewController.h"
 
-@interface VAMCommitteesViewController : VAMContentViewController
+@interface VAMCommitteesViewController : VAMContentViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSIndexPath *selectedIndexPath;
+}
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, strong) NSDictionary *sectionRows;
+
+@property (nonatomic, strong) NSArray *chairImageURLs;
 
 @end
