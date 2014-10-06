@@ -7,6 +7,7 @@
 //
 
 #import "VAMHomeViewController.h"
+#import "VAMTwitterClient.h"
 
 @interface VAMHomeViewController ()
 
@@ -14,13 +15,54 @@
 
 @implementation VAMHomeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
+        [self reloadTweets];
+        
     }
     return self;
+}
+
+-(void)reloadTweets
+{
+    [[VAMTwitterClient sharedClient] fetchTweetsWithCompletion:^(NSArray *result, NSError *error) {
+        if (result)
+        {
+            NSMutableArray *statuses = [[NSMutableArray alloc] init];
+            for (NSDictionary *dictionary in result)
+            {
+                [statuses addObject:[dictionary objectForKey:@"text"]];
+            }
+            _tweets = statuses;
+            [self reloadViews];
+        }
+        else
+        {
+            NSLog(@"Fail");
+        }
+    }];
+}
+
+-(void)reloadViews
+{
+    NSString *stream = @"";
+    for (NSString *str in _tweets)
+    {
+        stream = [[stream stringByAppendingString:str] stringByAppendingString:@"\n\n"];
+    }
+    _tweetStream.text = stream;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    [self reloadTweets];
 }
 
 - (void)viewDidLoad

@@ -18,5 +18,8 @@
 @property (nonatomic, strong) NSDictionary *sectionRows;
 
 @property (nonatomic, strong) NSArray *chairImageURLs;
+@property (nonatomic, strong) NSArray *chairNames;
+@property (nonatomic, strong) NSArray *topicStrings;
+@property (nonatomic, strong) NSArray *roomLocationStrings;
 
 @end

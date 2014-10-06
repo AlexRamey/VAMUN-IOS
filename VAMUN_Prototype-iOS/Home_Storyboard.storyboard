@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qYS-PG-PRx">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,7 +23,7 @@
         <!--Home-->
         <scene sceneID="jUQ-lh-EP1">
             <objects>
-                <viewController id="e48-9T-M9J" customClass="VAMHomeViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="e48-9T-M9J" customClass="VAMHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Pl-M7-Kj8"/>
                         <viewControllerLayoutGuide type="bottom" id="IgS-oa-gtT"/>
@@ -31,9 +31,48 @@
                     <view key="view" contentMode="scaleToFill" id="umw-a9-yGz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-ee-wvq">
+                                <rect key="frame" x="0.0" y="277" width="320" height="291"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="275" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BW5-jN-r6J">
+                                        <rect key="frame" x="8" y="8" width="304" height="275"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BW5-jN-r6J" secondAttribute="bottom" constant="8" id="1H4-YC-dGV"/>
+                                    <constraint firstAttribute="height" constant="291" id="CAi-t3-pTn"/>
+                                    <constraint firstItem="BW5-jN-r6J" firstAttribute="top" secondItem="lzx-ee-wvq" secondAttribute="top" constant="8" id="E0z-bx-5eY"/>
+                                    <constraint firstItem="BW5-jN-r6J" firstAttribute="leading" secondItem="lzx-ee-wvq" secondAttribute="leading" constant="8" id="OOP-np-Zxi"/>
+                                    <constraint firstAttribute="trailing" secondItem="BW5-jN-r6J" secondAttribute="trailing" constant="8" id="jav-ex-XjG"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qsr-eJ-60q">
+                                <rect key="frame" x="8" y="267" width="304" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="bDd-q9-rZ3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qsr-eJ-60q" firstAttribute="leading" secondItem="umw-a9-yGz" secondAttribute="leadingMargin" constant="-8" id="GTy-aX-4YE"/>
+                            <constraint firstItem="lzx-ee-wvq" firstAttribute="leading" secondItem="umw-a9-yGz" secondAttribute="leadingMargin" constant="-16" id="Yax-YU-b5v"/>
+                            <constraint firstItem="lzx-ee-wvq" firstAttribute="top" secondItem="Qsr-eJ-60q" secondAttribute="bottom" constant="8" id="Zg0-99-KR5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lzx-ee-wvq" secondAttribute="trailing" constant="-16" id="fnY-Hk-02P"/>
+                            <constraint firstItem="Qsr-eJ-60q" firstAttribute="width" secondItem="BW5-jN-r6J" secondAttribute="width" id="ie7-wr-3uF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qsr-eJ-60q" secondAttribute="trailing" constant="-8" id="ljh-tr-VGv"/>
+                            <constraint firstItem="IgS-oa-gtT" firstAttribute="top" secondItem="lzx-ee-wvq" secondAttribute="bottom" id="uY9-4b-8LE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="hHH-H1-1TH"/>
+                    <connections>
+                        <outlet property="tweetStream" destination="BW5-jN-r6J" id="wmI-E1-mlM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjQ-te-qjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

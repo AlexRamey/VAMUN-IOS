@@ -10,4 +10,7 @@
 
 @interface VAMHomeViewController : VAMContentViewController
 
+@property (nonatomic, strong) NSArray *tweets;
+@property (nonatomic, weak) IBOutlet UILabel *tweetStream;
+
 @end

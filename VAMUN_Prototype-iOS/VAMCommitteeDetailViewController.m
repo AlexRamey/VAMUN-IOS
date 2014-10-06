@@ -8,6 +8,7 @@
 
 #import "VAMCommitteeDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "AFNetworking.h"
 #import "UIColor+Theme.h"
 
 @interface VAMCommitteeDetailViewController ()
@@ -32,7 +33,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [_chairPicture setImageWithURL:[NSURL URLWithString:_imageURL] placeholderImage:nil];
+    //Chair Image
+    
+    UIActivityIndicatorView *loadIndicator = [[UIActivityIndicatorView alloc] init];
+    loadIndicator.opaque = YES;
+    loadIndicator.color = [UIColor blackColor];
+    [loadIndicator setHidesWhenStopped:YES];
+    loadIndicator.center = CGPointMake((_chairPicture.bounds.size.width - loadIndicator.bounds.size.width) / 2, (_chairPicture.bounds.size.height - loadIndicator.bounds.size.width) / 2);
+    [_chairPicture addSubview: loadIndicator];
+    [loadIndicator startAnimating];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_imageURL]];
+    
+    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        _chairPicture.image = responseObject;
+        [loadIndicator stopAnimating];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [loadIndicator stopAnimating];
+    }];
+    [requestOperation start];
+    
+    //Chair Name
+    _chairLabel.text = [@"Chair: " stringByAppendingString:_chairName];
+    
+    //Topics
+    _topicLabel.text = _topics;
+    
+    //Rooms
+    _roomLabel.text = _rooms;
+    
+    //Nav Bar Config
     
     UILabel *tlabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 230, 40)];
     tlabel.text= _committeeName;
@@ -50,7 +83,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

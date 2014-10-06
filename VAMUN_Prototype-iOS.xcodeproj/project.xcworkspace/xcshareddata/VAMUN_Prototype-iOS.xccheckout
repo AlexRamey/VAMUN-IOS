@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>683F8747-B3FF-4394-9F1E-54DC52DAD618</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VAMUN_Prototype-iOS</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>92C82AE5CFE6A8E30F1A2312CEB7A26B2F541FF0</key>
+		<string>https://github.com/AlexRamey/VAMUN-IOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VAMUN_Prototype-iOS.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>92C82AE5CFE6A8E30F1A2312CEB7A26B2F541FF0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/AlexRamey/VAMUN-IOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>92C82AE5CFE6A8E30F1A2312CEB7A26B2F541FF0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>92C82AE5CFE6A8E30F1A2312CEB7A26B2F541FF0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VAMUN-IOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

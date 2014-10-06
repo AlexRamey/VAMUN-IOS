@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9B09643241234F00934A665A /* libPods-VAMUN_Prototype-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */; };
 		D05F3D2619D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F3D2519D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m */; };
+		D05F3DA619E220E100BBA0F4 /* VAMTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F3DA519E220E100BBA0F4 /* VAMTwitterClient.m */; };
 		D0AFD47319AEC07D00D0716B /* VAMControllerStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AFD47019AEC07D00D0716B /* VAMControllerStore.m */; };
 		D0AFD47419AEC07D00D0716B /* VAMVoidController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AFD47219AEC07D00D0716B /* VAMVoidController.m */; };
 		D0BB7FB719A7CEA30025F85E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB7FB619A7CEA30025F85E /* Foundation.framework */; };
@@ -61,6 +62,8 @@
 		11394DBE418A46A892548680 /* Pods-VAMUN_Prototype-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VAMUN_Prototype-iOS.xcconfig"; path = "Pods/Pods-VAMUN_Prototype-iOS.xcconfig"; sourceTree = "<group>"; };
 		D05F3D2419D1C46300BBA0F4 /* VAMCommitteeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMCommitteeDetailViewController.h; sourceTree = "<group>"; };
 		D05F3D2519D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMCommitteeDetailViewController.m; sourceTree = "<group>"; };
+		D05F3DA419E220E100BBA0F4 /* VAMTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMTwitterClient.h; sourceTree = "<group>"; };
+		D05F3DA519E220E100BBA0F4 /* VAMTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMTwitterClient.m; sourceTree = "<group>"; };
 		D0AFD46F19AEC07D00D0716B /* VAMControllerStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMControllerStore.h; path = "VAMUN_Prototype-iOS/VAMControllerStore.h"; sourceTree = "<group>"; };
 		D0AFD47019AEC07D00D0716B /* VAMControllerStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMControllerStore.m; path = "VAMUN_Prototype-iOS/VAMControllerStore.m"; sourceTree = "<group>"; };
 		D0AFD47119AEC07D00D0716B /* VAMVoidController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMVoidController.h; path = "VAMUN_Prototype-iOS/VAMVoidController.h"; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 			children = (
 				D0BB801119A908A80025F85E /* VAMHomeViewController.h */,
 				D0BB801219A908A80025F85E /* VAMHomeViewController.m */,
+				D05F3DA419E220E100BBA0F4 /* VAMTwitterClient.h */,
+				D05F3DA519E220E100BBA0F4 /* VAMTwitterClient.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05F3D2619D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m in Sources */,
+				D05F3DA619E220E100BBA0F4 /* VAMTwitterClient.m in Sources */,
 				D0BB7FF919A7E80D0025F85E /* VAMTheme.m in Sources */,
 				D0BB7FF119A7DBEF0025F85E /* UIColor+Theme.m in Sources */,
 				D0BB800119A8FCD50025F85E /* VAMMapViewController.m in Sources */,
@@ -646,6 +652,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
 				INFOPLIST_FILE = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -660,6 +667,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Prefix.pch";
 				INFOPLIST_FILE = "VAMUN_Prototype-iOS/VAMUN_Prototype-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

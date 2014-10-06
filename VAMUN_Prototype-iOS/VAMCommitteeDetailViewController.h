@@ -11,7 +11,15 @@
 @interface VAMCommitteeDetailViewController : UIViewController
 
 @property (nonatomic, strong) NSString *committeeName;
-@property (nonatomic, weak) IBOutlet UIImageView *chairPicture;
 @property (nonatomic, strong) NSString *imageURL;
+@property (nonatomic, strong) NSString *chairName;
+@property (nonatomic, strong) NSString *topics;
+@property (nonatomic, strong) NSString *rooms;
+
+@property (nonatomic, weak) IBOutlet UIImageView *chairPicture;
+@property (nonatomic, weak) IBOutlet UILabel *chairLabel;
+@property (nonatomic, weak) IBOutlet UILabel *topicLabel;
+@property (nonatomic, weak) IBOutlet UILabel *roomLabel;
+
 
 @end

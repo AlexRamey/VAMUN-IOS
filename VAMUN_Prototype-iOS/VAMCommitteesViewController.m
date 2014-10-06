@@ -57,6 +57,57 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                             @"http://iroatuva.org/vamun/chairphotos/PressChair.JPG",
                             @"http://iroatuva.org/vamun/chairphotos/USSCChair.JPG",
                             @"http://iroatuva.org/vamun/chairphotos/JCDChair.JPG"];
+        
+        _chairNames = @[@"Emilia Gore",
+                        @"Phillip Grudier",
+                        @"Michael Treves",
+                        @"Mariatu Hamid Mansaray",
+                        @"Christopher Winschel",
+                        @"Neil Desai",
+                        @"Dante Disimplico",
+                        @"Victoria Tran",
+                        @"Cindy Song",
+                        @"Michael Drash", //10
+                        @"Greyson Spencer",
+                        @"Stephen Washington",
+                        @"Joshua Barkow",
+                        @"Joe Cahoon",
+                        @"Pranav Jain",
+                        @"Michael Ly",
+                        @"Zach Hosseinipour",
+                        @"Katherine Krudys",
+                        @"Pooja Gandhi",
+                        @"Shae Weathersbee", //20
+                        @"Kyle Angelotti",
+                        @"Emma Myers",
+                        @"Gary Depalo",
+                        @"Kate Kingsbury"]; //24
+        
+        _topicStrings = @[@"Topic 1: Biotechnologies in Developing Countries\n\nTopic 2: Sustainable Rural Transformation",
+                          @"Topic 1: Future of the Millenium Development Goals\n\nTopic 2: Best Practices and Furthering Development",
+                          @"Topic 1: Cameroon\n\nTopic 2: Rwanda-Burundi",
+                          @"Topic 1: Respond to the ethnic unrest in South Sudan\n\nTopic 2: LGBTQ Rights in Uganda",
+                          @"Topic 1: The International Political and Economic standing of Taiwan\n\nTopic 2: Migrant Worker Rights",
+                          @"Topic 1: Political Structure\n\nTopic 2: Constitution",
+                          @"Topic 1: The EU’s Future Energy Policy\nTopic 2: The Admission of New EU Members",
+                          @"Topic 1: Rwanda’s Economic Development\n\nTopic 2: Legal Resolutions and Reconciliation",
+                          @"Topic 1: Proper Presentation of Artists’ Work\n\nTopic 2: Eliminating Entrance Fees\nTopic 3: Museum Censorship of Art During the Vietnam War",
+                          @"Topic 1: Disappearing Languages\n\nTopic 2: Cultural Artifacts Trafficking", //10
+                          @"",
+                          @"Topic 1: Biological Warfare in the 21st Century\n\nTopic 2: Disease Outbreak Mitigation in a Globalized Community\nTopic 3: Disease Prevention in a Globalized Community",
+                          @"",
+                          @"",
+                          @"",
+                          @"Topic 1: Issues of Human Rights in U.S.-Sino Relations\n\nTopic 2: U.S.-Sino Military-Security Relations",
+                          @"",
+                          @"",
+                          @"",
+                          @"", //20
+                          @"",
+                          @"",
+                          @"",
+                          @""]; //24
+        
     }
     return self;
 }
@@ -134,6 +185,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
 {
     selectedIndexPath = indexPath;
     [self performSegueWithIdentifier:@"CommitteeMasterToDetail" sender:self];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 
@@ -146,15 +198,18 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
     {
         NSString *committeeTitle = [_sectionRows objectForKey:_sections[selectedIndexPath.section]][selectedIndexPath.row];
         
-        int urlIndex = 0;
+        int committeeIndex = 0;
         for (int i = 0; i < selectedIndexPath.section; i++)
         {
-            urlIndex += [[_sectionRows objectForKey:_sections[i]] count];
+            committeeIndex += [[_sectionRows objectForKey:_sections[i]] count];
         }
-        urlIndex += selectedIndexPath.row;
+        committeeIndex += selectedIndexPath.row;
         
         VAMCommitteeDetailViewController *vc = (VAMCommitteeDetailViewController *)[segue destinationViewController];
-        vc.imageURL = _chairImageURLs[urlIndex];
+        vc.imageURL = _chairImageURLs[committeeIndex];
+        vc.chairName = _chairNames[committeeIndex];
+        vc.topics = _topicStrings[committeeIndex];
+        vc.rooms = @"Friday: ROOM 1\nSaturday: ROOM 2\nSunday: ROOM 3";
         vc.committeeName = committeeTitle;
     }
     
