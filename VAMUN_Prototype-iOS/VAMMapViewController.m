@@ -44,22 +44,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
-    
-    [_locationManager startUpdatingLocation];
-    [_activityIndicator startAnimating];
-}
-
-- (void)appToBackground
-{
-    [_mapView setShowsUserLocation:NO];
-}
-
-- (void)appReturnsActive
-{
-    [_mapView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,8 +56,6 @@
 {
     //No need to set mapView's delegate property to nil because mapView will be destroyed when this gets destroyed b/c this alone holds the mapView's superview with a strong reference
     //Same for the location manager
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - MKMapViewDelegate Methods
@@ -118,6 +100,27 @@
     //In this case, just zoom the map to the middle of the UVA Lawn
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 500, 500);
     [_mapView setRegion:region animated:YES];
+}
+
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusDenied)
+    {
+        [_mapView setShowsUserLocation:NO];
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 500, 500);
+        [_mapView setRegion:region animated:YES];
+    }
+    else if (status == kCLAuthorizationStatusAuthorizedWhenInUse)
+    {
+        [_mapView setShowsUserLocation:YES];
+        [_locationManager startUpdatingLocation];
+        [_activityIndicator startAnimating];
+    }
+    else
+    {
+        //do nothing
+    }
 }
 
 /*
