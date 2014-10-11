@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hg8-xQ-4gc" customClass="VAMTwitterCard">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E2z-V1-xPv">
+                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="bOZ-A5-GDo"/>
+                        <constraint firstAttribute="width" constant="70" id="zaw-re-mC8"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="226" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-FM-gJU">
+                    <rect key="frame" x="86" y="8" width="226" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="106" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bec-nG-PSI">
+                    <rect key="frame" x="8" y="86" width="304" height="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="226" placeholderIntrinsicHeight="21" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH4-cg-fQQ">
+                    <rect key="frame" x="86" y="37" width="226" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ov2-FM-gJU" firstAttribute="top" secondItem="hg8-xQ-4gc" secondAttribute="top" constant="8" id="2Ej-8W-BJ0"/>
+                <constraint firstItem="ov2-FM-gJU" firstAttribute="leading" secondItem="E2z-V1-xPv" secondAttribute="trailing" constant="8" id="4Nr-Nf-zsb"/>
+                <constraint firstAttribute="trailing" secondItem="bec-nG-PSI" secondAttribute="trailing" constant="8" id="AHr-oj-ZMe"/>
+                <constraint firstAttribute="bottom" secondItem="bec-nG-PSI" secondAttribute="bottom" constant="8" id="SM5-Zx-hRU"/>
+                <constraint firstItem="bec-nG-PSI" firstAttribute="top" secondItem="E2z-V1-xPv" secondAttribute="bottom" constant="8" id="fSU-go-GqK"/>
+                <constraint firstItem="xH4-cg-fQQ" firstAttribute="leading" secondItem="E2z-V1-xPv" secondAttribute="trailing" constant="8" id="hdm-4g-W2o"/>
+                <constraint firstItem="E2z-V1-xPv" firstAttribute="top" secondItem="hg8-xQ-4gc" secondAttribute="top" constant="8" id="mk0-he-gfa"/>
+                <constraint firstItem="xH4-cg-fQQ" firstAttribute="top" secondItem="ov2-FM-gJU" secondAttribute="bottom" constant="8" id="qbC-CM-XCc"/>
+                <constraint firstAttribute="trailing" secondItem="xH4-cg-fQQ" secondAttribute="trailing" constant="8" id="vGa-7q-Eg7"/>
+                <constraint firstItem="E2z-V1-xPv" firstAttribute="leading" secondItem="hg8-xQ-4gc" secondAttribute="leading" constant="8" id="wVd-TL-A6c"/>
+                <constraint firstAttribute="trailing" secondItem="ov2-FM-gJU" secondAttribute="trailing" constant="8" id="yax-7R-Rx8"/>
+                <constraint firstItem="bec-nG-PSI" firstAttribute="leading" secondItem="hg8-xQ-4gc" secondAttribute="leading" constant="8" id="yhb-wN-22U"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameLabel" destination="ov2-FM-gJU" id="4Fv-in-rmQ"/>
+                <outlet property="profileThumbnail" destination="E2z-V1-xPv" id="m5m-zJ-8hc"/>
+                <outlet property="timeLabel" destination="xH4-cg-fQQ" id="Ia4-uT-tDX"/>
+                <outlet property="tweetLabel" destination="bec-nG-PSI" id="jpa-lH-zit"/>
+            </connections>
+            <point key="canvasLocation" x="596" y="248"/>
+        </view>
+    </objects>
+</document>

@@ -54,27 +54,40 @@ static NSString * const TWITTER_CONSUMER_SECRET = @"JvYeFjmvdGh2TE8G8mSJEm2MYdKn
     request.HTTPMethod = @"POST";
     
     [[self dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (responseObject)
+        if (responseObject && [responseObject objectForKey:@"access_token"])
         {
             NSString *bearerAccessToken = [responseObject objectForKey:@"access_token"];
-            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=VAMUNXXXIV&count=20"]];
-            
-            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamunxxxiv+%23vamun34+%23vamun&src=typd"]];
-            /*NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamun+%23vamun34+%23vamunxxxiv&result_type=recent&include_entities=true&sinceid=0&src=typd"]];*/
+            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamun+OR+%23vamun34+OR+%23vamunxxxiv"]];
+            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23uva&count=25"]];
             [tweetsRequest setValue:[NSString stringWithFormat:@"Bearer %@", bearerAccessToken] forHTTPHeaderField:@"Authorization"];
             request.HTTPMethod = @"GET";
             
-            [[self dataTaskWithRequest:tweetsRequest completionHandler:^(NSURLResponse *response, id responseObject2, NSError *error) {
+            [[self dataTaskWithRequest:tweetsRequest completionHandler:^(NSURLResponse *response, id responseObject2, NSError *error2) {
                 if (responseObject2)
                 {
                     NSLog(@"RESPONSE OBJECT: %@", responseObject2);
                 }
-                completion(responseObject2, nil);
+                if (responseObject2 && [responseObject2 objectForKey:@"statuses"])
+                {
+                    completion([responseObject2 objectForKey:@"statuses"], nil);
+                }
+                else
+                {
+                    if (!error2)
+                    {
+                        error2 = [[NSError alloc] init];
+                    }
+                    completion(nil, error2);
+                }
             }] resume];
         }
         else
         {
-            NSLog(@"ERROR: %@", error);
+            if (!error)
+            {
+                error = [[NSError alloc] init];
+            }
+            completion(nil, error);
         }
     }] resume];
     

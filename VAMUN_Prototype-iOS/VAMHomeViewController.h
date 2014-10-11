@@ -7,10 +7,14 @@
 //
 
 #import "VAMContentViewController.h"
+#import "VAMTwitterCard.h"
 
-@interface VAMHomeViewController : VAMContentViewController
+@interface VAMHomeViewController : VAMContentViewController <HomeViewCallback>
+{
+    CGFloat yOffset;
+}
 
-@property (nonatomic, strong) NSArray *tweets;
-@property (nonatomic, weak) IBOutlet UILabel *tweetStream;
+@property (nonatomic, strong) NSArray *twitterCards;
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 
 @end

@@ -47,6 +47,9 @@
 		D0BB802519A909200025F85E /* VAMContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB802419A909200025F85E /* VAMContactViewController.m */; };
 		D0BB803019A90BBC0025F85E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB802F19A90BBC0025F85E /* MapKit.framework */; };
 		D0F593FC19E8E46700B09260 /* VAMFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */; };
+		D0F593FE19E98D6E00B09260 /* VAMTwitterCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F593FD19E98D6E00B09260 /* VAMTwitterCard.xib */; };
+		D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940019E9902F00B09260 /* VAMTwitterCard.m */; };
+		D0F5940319E9AA2200B09260 /* FoodVenue.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5940219E9AA2200B09260 /* FoodVenue.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,10 @@
 		D0BB802419A909200025F85E /* VAMContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMContactViewController.m; sourceTree = "<group>"; };
 		D0BB802F19A90BBC0025F85E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMFoodCell.xib; sourceTree = "<group>"; };
+		D0F593FD19E98D6E00B09260 /* VAMTwitterCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMTwitterCard.xib; sourceTree = "<group>"; };
+		D0F593FF19E9902F00B09260 /* VAMTwitterCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMTwitterCard.h; sourceTree = "<group>"; };
+		D0F5940019E9902F00B09260 /* VAMTwitterCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMTwitterCard.m; sourceTree = "<group>"; };
+		D0F5940219E9AA2200B09260 /* FoodVenue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodVenue.json; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,6 +227,7 @@
 		D0BB7FBD19A7CEA30025F85E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0F5940219E9AA2200B09260 /* FoodVenue.json */,
 				D0BB7FBE19A7CEA30025F85E /* VAMUN_Prototype-iOS-Info.plist */,
 				D0BB7FBF19A7CEA30025F85E /* InfoPlist.strings */,
 				D0BB7FC219A7CEA30025F85E /* main.m */,
@@ -295,6 +303,9 @@
 			children = (
 				D0BB801119A908A80025F85E /* VAMHomeViewController.h */,
 				D0BB801219A908A80025F85E /* VAMHomeViewController.m */,
+				D0F593FF19E9902F00B09260 /* VAMTwitterCard.h */,
+				D0F5940019E9902F00B09260 /* VAMTwitterCard.m */,
+				D0F593FD19E98D6E00B09260 /* VAMTwitterCard.xib */,
 				D05F3DA419E220E100BBA0F4 /* VAMTwitterClient.h */,
 				D05F3DA519E220E100BBA0F4 /* VAMTwitterClient.m */,
 			);
@@ -464,6 +475,8 @@
 				D0BB800E19A906890025F85E /* Contact_Info_Storyboard.storyboard in Resources */,
 				D0BB7FC119A7CEA30025F85E /* InfoPlist.strings in Resources */,
 				D0F593FC19E8E46700B09260 /* VAMFoodCell.xib in Resources */,
+				D0F5940319E9AA2200B09260 /* FoodVenue.json in Resources */,
+				D0F593FE19E98D6E00B09260 /* VAMTwitterCard.xib in Resources */,
 				D0BB800619A906410025F85E /* Committees_Storyboard.storyboard in Resources */,
 				D0BB7FC919A7CEA30025F85E /* Images.xcassets in Resources */,
 				D0BB800C19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard in Resources */,
@@ -531,6 +544,7 @@
 				D0AFD47419AEC07D00D0716B /* VAMVoidController.m in Sources */,
 				D0BB7FC719A7CEA30025F85E /* VAMAppDelegate.m in Sources */,
 				D0AFD47319AEC07D00D0716B /* VAMControllerStore.m in Sources */,
+				D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */,
 				D0BB801319A908A80025F85E /* VAMHomeViewController.m in Sources */,
 				D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */,
 				D0BB801C19A908E60025F85E /* VAMMerchandiseViewController.m in Sources */,

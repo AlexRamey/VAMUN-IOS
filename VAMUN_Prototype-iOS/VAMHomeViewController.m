@@ -8,6 +8,7 @@
 
 #import "VAMHomeViewController.h"
 #import "VAMTwitterClient.h"
+#import "VAMTwitterCard.h"
 
 @interface VAMHomeViewController ()
 
@@ -22,7 +23,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        //[self reloadTweets];
         
     }
     return self;
@@ -32,15 +32,26 @@
 {
     [[VAMTwitterClient sharedClient] fetchTweetsWithCompletion:^(NSArray *result, NSError *error) {
         if (result)
-        {/*
-            NSMutableArray *statuses = [[NSMutableArray alloc] init];
-            for (NSDictionary *dictionary in result)
+        {
+            NSMutableArray *cards = [[NSMutableArray alloc] init];
+            yOffset = 0.0;
+            
+            for (NSDictionary *tweet in result)
             {
-                [statuses addObject:[dictionary objectForKey:@"text"]];
+                
+                NSString *time = [tweet objectForKey:@"created_at"];
+                NSString *tweetText = [tweet objectForKey:@"text"];
+                NSDictionary *user = [tweet objectForKey:@"user"];
+                NSString *userTitle = [user objectForKey:@"name"];
+                NSString *thumbnailImage = [user objectForKey:@"profile_image_url"];
+                NSString *screenName = [user objectForKey:@"screen_name"];
+                
+                VAMTwitterCard *card = [[VAMTwitterCard alloc] initWithUserTitle:userTitle screenName:screenName time:time tweet:tweetText thumbnailURL:thumbnailImage offset:yOffset callback:self];
+                [cards addObject:card];
             }
-            _tweets = statuses;
+            
+            _twitterCards = cards;
             [self reloadViews];
-          */
         }
         else
         {
@@ -51,31 +62,38 @@
 
 -(void)reloadViews
 {
-    NSString *stream = @"";
-    for (NSString *str in _tweets)
+    for (VAMTwitterCard *card in _twitterCards)
     {
-        stream = [[stream stringByAppendingString:str] stringByAppendingString:@"\n\n"];
+        [_scrollView addSubview:card];
     }
-    _tweetStream.text = stream;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     
-    //[self reloadTweets];
+    [self reloadTweets];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self reloadTweets];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+# pragma mark - HomeViewCallback Methods
+
+-(void)twitterCardCreatedWithHeight:(CGFloat)height
+{
+    yOffset += height + 10;
+    [_scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, yOffset)];
 }
 
 /*
