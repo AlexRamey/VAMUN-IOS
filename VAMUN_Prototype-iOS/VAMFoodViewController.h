@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSArray *sections;
 @property (nonatomic, strong) NSIndexPath *selectedPath;
 
-@property (nonatomic, strong) NSArray *prototypeRows;
-
+@property (nonatomic, strong) NSMutableArray *onGroundsRows;
+@property (nonatomic, strong) NSMutableArray *theCornerRows;
 
 @end

@@ -162,9 +162,9 @@ static NSString * const VAMLeftViewControllerCell = @"VAMLeftViewControllerCell"
     if (selectedIndex != indexPath.row)
     {
         VAMControllerStore *store = [VAMControllerStore sharedInstance];
-        UINavigationController *navigationController = [store viewControllerForIndex:indexPath.row];
+        UINavigationController *navigationController = [store viewControllerForIndex:(int)indexPath.row];
         [[self wta_zoomNavigationController] setContentViewController:navigationController];
-        selectedIndex = indexPath.row;
+        selectedIndex = (int)indexPath.row;
     }
     
     [[self wta_zoomNavigationController] hideLeftViewController:YES];

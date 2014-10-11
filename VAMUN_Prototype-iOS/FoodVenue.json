@@ -17,7 +17,7 @@
         "Hours": "Thursday \u0026 Friday 7am-9pm, Saturday \u0026 Sunday 9:30am-9pm",
         "Title": "Observatory Hill Dining Hall",
         "createdAt": "2014-10-09T00:44:18.373Z",
-        "isSponsor": false,
+        "isSponsor": true,
         "objectId": "2BpfiGrPQ5",
         "onGrounds": true,
         "updatedAt": "2014-10-09T00:45:02.688Z"
@@ -84,7 +84,7 @@
         "Hours": "Thursday 8am-1am, Friday 8am-2am, Saturday 10am-2am, Sunday 10am-12am",
         "Title": "The Crossroads",
         "createdAt": "2014-10-09T00:49:52.290Z",
-        "isSponsor": true,
+        "isSponsor": false,
         "objectId": "LM82NJjb4r",
         "onGrounds": true,
         "updatedAt": "2014-10-09T00:50:41.784Z"

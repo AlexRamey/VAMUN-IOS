@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qYS-PG-PRx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -33,16 +34,34 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snc-pW-65a">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="234" width="320" height="334"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rotunda_image" translatesAutoresizingMaskIntoConstraints="NO" id="LEF-Ch-c5g">
+                                <rect key="frame" x="0.0" y="64" width="320" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LEF-Ch-c5g" secondAttribute="height" multiplier="64:27" id="eKO-9G-aP2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="21" text="Recent Tweets #vamun #vamunxxxiv #vamun34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCx-tO-ers">
+                                <rect key="frame" x="0.0" y="207" width="320" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OCx-tO-ers" firstAttribute="leading" secondItem="umw-a9-yGz" secondAttribute="leadingMargin" constant="-16" id="4yV-79-UKe"/>
                             <constraint firstItem="IgS-oa-gtT" firstAttribute="top" secondItem="Snc-pW-65a" secondAttribute="bottom" id="7TZ-6A-hG0"/>
-                            <constraint firstItem="Snc-pW-65a" firstAttribute="top" secondItem="5Pl-M7-Kj8" secondAttribute="bottom" id="IH5-kj-b5b"/>
+                            <constraint firstItem="LEF-Ch-c5g" firstAttribute="top" secondItem="5Pl-M7-Kj8" secondAttribute="bottom" id="PX7-lf-Vk2"/>
+                            <constraint firstItem="OCx-tO-ers" firstAttribute="top" secondItem="LEF-Ch-c5g" secondAttribute="bottom" constant="8" id="ZPK-It-Yeo"/>
                             <constraint firstItem="Snc-pW-65a" firstAttribute="leading" secondItem="umw-a9-yGz" secondAttribute="leadingMargin" constant="-16" id="hr5-mJ-K3E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Snc-pW-65a" secondAttribute="trailing" constant="-16" id="sm7-og-ZsT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LEF-Ch-c5g" secondAttribute="trailing" constant="-16" id="v8p-sc-Xhl"/>
+                            <constraint firstItem="LEF-Ch-c5g" firstAttribute="leading" secondItem="umw-a9-yGz" secondAttribute="leadingMargin" constant="-16" id="vpA-r7-lMr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OCx-tO-ers" secondAttribute="trailing" constant="-16" id="xlq-Rb-uiD"/>
+                            <constraint firstItem="Snc-pW-65a" firstAttribute="top" secondItem="OCx-tO-ers" secondAttribute="bottom" constant="6" id="yKd-SK-dsI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="hHH-H1-1TH"/>
@@ -55,6 +74,9 @@
             <point key="canvasLocation" x="60" y="-81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rotunda_image" width="480" height="200"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

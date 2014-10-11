@@ -7,6 +7,7 @@
 //
 
 #import "VAMFoodViewController.h"
+#import "VAMFoodVenue.h"
 #import "UIColor+Theme.h"
 
 @interface VAMFoodViewController ()
@@ -14,6 +15,8 @@
 @end
 
 @implementation VAMFoodViewController
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 static NSString * const FOOD_CELL = @"FOOD_CELL";
 
@@ -24,7 +27,72 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
     {
         //custom initialization
         _sections = @[@"On Grounds",@"On the Corner"];
-        _prototypeRows = @[@"O-Hill", @"Qdoba", @"Little John's"];
+        _onGroundsRows = [[NSMutableArray alloc] init];
+        _theCornerRows = [[NSMutableArray alloc] init];
+        
+        NSData *foodVenueJSONData = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FoodVenue" ofType:@"json"]];
+        NSError *error = nil;
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:foodVenueJSONData options:NSJSONReadingMutableContainers error:&error];
+        NSArray *foodObjectDictionary = [jsonObject objectForKey:@"results"];
+        
+        for (NSDictionary *dictionary in foodObjectDictionary)
+        {
+            VAMFoodVenue *venue = [[VAMFoodVenue alloc] init];
+            venue.title = [dictionary objectForKey:@"Title"];
+            venue.address = [dictionary objectForKey:@"Address"];
+            venue.hours = [dictionary objectForKey:@"Hours"];
+            venue.phone = [dictionary objectForKey:@"Phone"];
+            venue.venueDescription = [dictionary objectForKey:@"Description"];
+            venue.isSponsor = [NSNumber numberWithBool:[[dictionary objectForKey:@"isSponsor"] boolValue]];
+            venue.isOnGrounds = [NSNumber numberWithBool:[[dictionary objectForKey:@"onGrounds"] boolValue]];
+            
+            if ([venue.isOnGrounds boolValue] == YES)
+            {
+                [_onGroundsRows addObject:venue];
+            }
+            else
+            {
+                [_theCornerRows addObject:venue];
+            }
+        }
+        
+        [_onGroundsRows sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            VAMFoodVenue *venue1 = (VAMFoodVenue *)obj1;
+            VAMFoodVenue *venue2 = (VAMFoodVenue *)obj2;
+            
+            if ([venue1.isSponsor boolValue] == YES && [venue2.isSponsor boolValue] == NO)
+            {
+                return NSOrderedAscending;
+            }
+            else if ([venue1.isSponsor boolValue] == NO && [venue1.isSponsor boolValue] == YES)
+            {
+                return NSOrderedDescending;
+            }
+            else
+            {
+                return [venue1.title caseInsensitiveCompare:venue2.title];
+            }
+        }];
+        
+        [_theCornerRows sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            VAMFoodVenue *venue1 = (VAMFoodVenue *)obj1;
+            VAMFoodVenue *venue2 = (VAMFoodVenue *)obj2;
+            
+            if ([venue1.isSponsor boolValue] == YES && [venue2.isSponsor boolValue] == NO)
+            {
+                return NSOrderedAscending;
+            }
+            else if ([venue1.isSponsor boolValue] == NO && [venue1.isSponsor boolValue] == YES)
+            {
+                return NSOrderedDescending;
+            }
+            else
+            {
+                return [venue1.title caseInsensitiveCompare:venue2.title];
+            }
+        }];
+         
+        
     }
     return self;
 }
@@ -52,7 +120,14 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_prototypeRows count];
+    if (section == 0)
+    {
+        return [_onGroundsRows count];
+    }
+    else
+    {
+        return [_theCornerRows count];
+    }
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -64,6 +139,17 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
 {
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:FOOD_CELL];
     cell.backgroundColor = [UIColor UVAWhite];
+    
+    VAMFoodVenue *venue = nil;
+    
+    if (indexPath.section == 0)
+    {
+        venue = [_onGroundsRows objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        venue = [_theCornerRows objectAtIndex:indexPath.row];
+    }
     
     UILabel *titleLabel = nil;
     UILabel *descriptionLabel = nil;
@@ -86,12 +172,36 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
         }
     }
     
-    titleLabel.text = [_prototypeRows objectAtIndex:indexPath.row];
-    descriptionLabel.text = @"Gotcha Son.";
+    titleLabel.text = venue.title;
+    
+    NSMutableString *detailInfo = [[NSMutableString alloc] init];
+    if (venue.hours && [venue.hours caseInsensitiveCompare:@""] != NSOrderedSame)
+    {
+        [detailInfo appendString:venue.hours];
+        [detailInfo appendString:@"\n\n"];
+    }
+    
+    if (venue.address && [venue.address caseInsensitiveCompare:@""] != NSOrderedSame)
+    {
+        [detailInfo appendString:venue.address];
+        [detailInfo appendString:@"\n\n"];
+    }
+    
+    if (venue.phone && [venue.phone caseInsensitiveCompare:@""] != NSOrderedSame)
+    {
+        [detailInfo appendString:venue.phone];
+        [detailInfo appendString:@"\n\n"];
+    }
+    
+    if (venue.venueDescription && [venue.venueDescription caseInsensitiveCompare:@""] != NSOrderedSame)
+    {
+        [detailInfo appendString:venue.venueDescription];
+    }
+    
+    descriptionLabel.text = detailInfo;
     
     return cell;
 }
-
 
 #pragma mark - UITableViewDelegate Methods
 
@@ -137,7 +247,7 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
     }
     else
     {
-        return 40.0;
+        return 44.0;
     }
 }
 

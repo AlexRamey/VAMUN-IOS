@@ -50,6 +50,7 @@
 		D0F593FE19E98D6E00B09260 /* VAMTwitterCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F593FD19E98D6E00B09260 /* VAMTwitterCard.xib */; };
 		D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940019E9902F00B09260 /* VAMTwitterCard.m */; };
 		D0F5940319E9AA2200B09260 /* FoodVenue.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5940219E9AA2200B09260 /* FoodVenue.json */; };
+		D0F5940619E9BF0A00B09260 /* VAMFoodVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940519E9BF0A00B09260 /* VAMFoodVenue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		D0F593FF19E9902F00B09260 /* VAMTwitterCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMTwitterCard.h; sourceTree = "<group>"; };
 		D0F5940019E9902F00B09260 /* VAMTwitterCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMTwitterCard.m; sourceTree = "<group>"; };
 		D0F5940219E9AA2200B09260 /* FoodVenue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodVenue.json; sourceTree = "<group>"; };
+		D0F5940419E9BF0A00B09260 /* VAMFoodVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMFoodVenue.h; sourceTree = "<group>"; };
+		D0F5940519E9BF0A00B09260 /* VAMFoodVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMFoodVenue.m; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -329,6 +332,8 @@
 				D0BB801719A908CE0025F85E /* VAMFoodViewController.h */,
 				D0BB801819A908CE0025F85E /* VAMFoodViewController.m */,
 				D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */,
+				D0F5940419E9BF0A00B09260 /* VAMFoodVenue.h */,
+				D0F5940519E9BF0A00B09260 /* VAMFoodVenue.m */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -547,6 +552,7 @@
 				D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */,
 				D0BB801319A908A80025F85E /* VAMHomeViewController.m in Sources */,
 				D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */,
+				D0F5940619E9BF0A00B09260 /* VAMFoodVenue.m in Sources */,
 				D0BB801C19A908E60025F85E /* VAMMerchandiseViewController.m in Sources */,
 				D0BB7FED19A7DA850025F85E /* VAMContentViewController.m in Sources */,
 				D0BB801919A908CE0025F85E /* VAMFoodViewController.m in Sources */,
