@@ -22,7 +22,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        [self reloadTweets];
+        //[self reloadTweets];
         
     }
     return self;
@@ -32,7 +32,7 @@
 {
     [[VAMTwitterClient sharedClient] fetchTweetsWithCompletion:^(NSArray *result, NSError *error) {
         if (result)
-        {
+        {/*
             NSMutableArray *statuses = [[NSMutableArray alloc] init];
             for (NSDictionary *dictionary in result)
             {
@@ -40,6 +40,7 @@
             }
             _tweets = statuses;
             [self reloadViews];
+          */
         }
         else
         {
@@ -62,7 +63,7 @@
 {
     [super viewWillAppear:YES];
     
-    [self reloadTweets];
+    //[self reloadTweets];
 }
 
 - (void)viewDidLoad

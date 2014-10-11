@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lF1-2X-oAk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lF1-2X-oAk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-331" y="-19"/>
         </scene>
-        <!--Food View Controller - Food-->
+        <!--Food-->
         <scene sceneID="eDP-gh-RS9">
             <objects>
-                <viewController id="MRi-V3-0Wa" customClass="VAMFoodViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MRi-V3-0Wa" customClass="VAMFoodViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ubF-5m-hgH"/>
                         <viewControllerLayoutGuide type="bottom" id="QcD-ky-NhZ"/>
@@ -30,9 +31,49 @@
                     <view key="view" contentMode="scaleToFill" id="R8f-34-SqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-Sc-iT7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NvM-HN-mwN">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NvM-HN-mwN" id="nbu-Eu-SBU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rqS-oF-FSm">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rqS-oF-FSm" id="FgL-Ys-UCk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hxA-y6-gyp">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hxA-y6-gyp" id="fn5-Ed-R2N">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MRi-V3-0Wa" id="tVY-X8-5da"/>
+                                    <outlet property="delegate" destination="MRi-V3-0Wa" id="6re-D9-LJd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ew-Sc-iT7" firstAttribute="leading" secondItem="R8f-34-SqS" secondAttribute="leadingMargin" constant="-16" id="9Hv-Wj-0ZC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Ew-Sc-iT7" secondAttribute="trailing" constant="-16" id="M4L-eS-peX"/>
+                            <constraint firstItem="2Ew-Sc-iT7" firstAttribute="top" secondItem="ubF-5m-hgH" secondAttribute="bottom" id="MDD-En-odd"/>
+                            <constraint firstItem="QcD-ky-NhZ" firstAttribute="top" secondItem="2Ew-Sc-iT7" secondAttribute="bottom" id="OkW-BB-BPW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food" id="4WJ-TG-1TR"/>
+                    <connections>
+                        <outlet property="tableView" destination="2Ew-Sc-iT7" id="tb7-tj-hM5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Db2-46-Cqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

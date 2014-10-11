@@ -8,6 +8,14 @@
 
 #import "VAMContentViewController.h"
 
-@interface VAMFoodViewController : VAMContentViewController
+@interface VAMFoodViewController : VAMContentViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *sections;
+@property (nonatomic, strong) NSIndexPath *selectedPath;
+
+@property (nonatomic, strong) NSArray *prototypeRows;
+
 
 @end

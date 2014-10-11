@@ -32,6 +32,7 @@
         _locationManager = [[CLLocationManager alloc] init];
         [_locationManager setDelegate:self];
         [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        [_locationManager requestWhenInUseAuthorization];
         
         lawnCoordinate = CLLocationCoordinate2DMake(38.035400, -78.503398);
     }

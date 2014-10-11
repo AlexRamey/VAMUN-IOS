@@ -48,21 +48,19 @@ static NSString * const TWITTER_CONSUMER_SECRET = @"JvYeFjmvdGh2TE8G8mSJEm2MYdKn
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/oauth2/token"]];
     [request setHTTPBody:[@"grant_type=client_credentials" dataUsingEncoding:NSUTF8StringEncoding]];
-    NSString *test = [NSString stringWithFormat:@"Basic %@", base64EncodedBearerTokenCredentials];
-    [request setValue:test forHTTPHeaderField:@"Authorization"];
+    NSString *authorization = [NSString stringWithFormat:@"Basic %@", base64EncodedBearerTokenCredentials];
+    [request setValue:authorization forHTTPHeaderField:@"Authorization"];
     [request setValue:@"application/x-www-form-urlencoded;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     request.HTTPMethod = @"POST";
     
     [[self dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (responseObject)
         {
-            NSLog(@"RESPONSE OBJECT: %@", responseObject);
             NSString *bearerAccessToken = [responseObject objectForKey:@"access_token"];
-            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=VAMUNXXXIV&count=20"]];
+            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=VAMUNXXXIV&count=20"]];
             
-            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%40UVa&src=typd"]];
-            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%40VAMUNXXXIV&src=typd"]];
-            
+            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamunxxxiv+%23vamun34+%23vamun&src=typd"]];
+            /*NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamun+%23vamun34+%23vamunxxxiv&result_type=recent&include_entities=true&sinceid=0&src=typd"]];*/
             [tweetsRequest setValue:[NSString stringWithFormat:@"Bearer %@", bearerAccessToken] forHTTPHeaderField:@"Authorization"];
             request.HTTPMethod = @"GET";
             

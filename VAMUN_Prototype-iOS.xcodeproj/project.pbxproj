@@ -46,6 +46,7 @@
 		D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB802119A909130025F85E /* VAMWebViewController.m */; };
 		D0BB802519A909200025F85E /* VAMContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BB802419A909200025F85E /* VAMContactViewController.m */; };
 		D0BB803019A90BBC0025F85E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0BB802F19A90BBC0025F85E /* MapKit.framework */; };
+		D0F593FC19E8E46700B09260 /* VAMFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		D0BB802319A909200025F85E /* VAMContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMContactViewController.h; sourceTree = "<group>"; };
 		D0BB802419A909200025F85E /* VAMContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMContactViewController.m; sourceTree = "<group>"; };
 		D0BB802F19A90BBC0025F85E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMFoodCell.xib; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -315,6 +317,7 @@
 			children = (
 				D0BB801719A908CE0025F85E /* VAMFoodViewController.h */,
 				D0BB801819A908CE0025F85E /* VAMFoodViewController.m */,
+				D0F593FB19E8E46700B09260 /* VAMFoodCell.xib */,
 			);
 			name = Food;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				D0BB800419A906300025F85E /* Home_Storyboard.storyboard in Resources */,
 				D0BB800E19A906890025F85E /* Contact_Info_Storyboard.storyboard in Resources */,
 				D0BB7FC119A7CEA30025F85E /* InfoPlist.strings in Resources */,
+				D0F593FC19E8E46700B09260 /* VAMFoodCell.xib in Resources */,
 				D0BB800619A906410025F85E /* Committees_Storyboard.storyboard in Resources */,
 				D0BB7FC919A7CEA30025F85E /* Images.xcassets in Resources */,
 				D0BB800C19A9067A0025F85E /* VAMUN_Web_Storyboard.storyboard in Resources */,
