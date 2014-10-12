@@ -146,7 +146,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:COMMITTEE_CELL];
-    cell.backgroundColor = [UIColor UVAWhite];
+    cell.backgroundColor = [UIColor whiteColor];
     
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:[_sectionRows objectForKey:_sections[indexPath.section]][indexPath.row]];
     [attrString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue" size:14] range:NSMakeRange(0, [attrString length])];
@@ -176,7 +176,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
     sectionHeader.backgroundColor = [UIColor UVABlue];
     NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:_sections[section]];
     [attrString addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"HelveticaNeue" size:16] range:NSMakeRange(0, [attrString length])];
-    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor UVAWhite] range:NSMakeRange(0, [attrString length])];
+    [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, [attrString length])];
     sectionHeader.attributedText = attrString;
     return sectionHeader;
 }

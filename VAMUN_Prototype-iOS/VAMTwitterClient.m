@@ -57,8 +57,8 @@ static NSString * const TWITTER_CONSUMER_SECRET = @"JvYeFjmvdGh2TE8G8mSJEm2MYdKn
         if (responseObject && [responseObject objectForKey:@"access_token"])
         {
             NSString *bearerAccessToken = [responseObject objectForKey:@"access_token"];
-            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamun+OR+%23vamun34+OR+%23vamunxxxiv&count=20"]];
-            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23uva&count=20"]];
+            //NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23vamun+OR+%23vamun34+OR+%23vamunxxxiv&count=20"]];
+            NSMutableURLRequest *tweetsRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/search/tweets.json?q=%23uva&count=20"]];
             [tweetsRequest setValue:[NSString stringWithFormat:@"Bearer %@", bearerAccessToken] forHTTPHeaderField:@"Authorization"];
             request.HTTPMethod = @"GET";
             

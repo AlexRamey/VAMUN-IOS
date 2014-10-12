@@ -8,6 +8,8 @@
 
 #import "VAMMapViewController.h"
 #import <MapKit/MapKit.h>
+#import "VAMBuilding.h"
+#import "VAMAnnotationView.h"
 
 @interface VAMMapViewController ()
 {
@@ -23,6 +25,8 @@
 
 @implementation VAMMapViewController
 
+static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -35,6 +39,21 @@
         [_locationManager requestWhenInUseAuthorization];
         
         lawnCoordinate = CLLocationCoordinate2DMake(38.035400, -78.503398);
+        
+        NSMutableArray *buildings = [[NSMutableArray alloc] init];
+        
+        NSData *uvaBuildingJSONData = [[NSData alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"UVABuilding" ofType:@"json"]];
+        NSError *error = nil;
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:uvaBuildingJSONData options:NSJSONReadingMutableContainers error:&error];
+        NSArray *buildingObjectDictionary = [jsonObject objectForKey:@"results"];
+        
+        for (NSDictionary *dictionary in buildingObjectDictionary)
+        {
+            CLLocationCoordinate2D coord = CLLocationCoordinate2DMake([[dictionary objectForKey:@"Latitude"] doubleValue], [[dictionary objectForKey:@"Longitude"] doubleValue]);
+            VAMBuilding *bld = [[VAMBuilding alloc] initWithCoordinate:coord buildingName:[dictionary objectForKey:@"Name"]];
+            [buildings addObject:bld];
+        }
+        _buildingAnnotations = buildings;
     }
     
     return self;
@@ -44,6 +63,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    for (VAMBuilding *b in _buildingAnnotations)
+    {
+        [_mapView addAnnotation:b];
+    }
+    
+    [_mapView setMapType:MKMapTypeHybrid];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,9 +85,70 @@
 
 #pragma mark - MKMapViewDelegate Methods
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    //launch into directions . . .
+    
+    // If it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    if ([annotation isKindOfClass:[VAMBuilding class]])
+    {
+        //Get primary category of the venue that the annotation represents
+        NSString *reuseIdentifier = VAMUN_PIN_IDENTIFIER;
+        
+        //Try to dequeue an existing pin first
+        VAMAnnotationView *pinView = (VAMAnnotationView *)[_mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
+        
+        if (!pinView)
+        {
+            pinView = [[VAMAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+        }
+        else
+        {
+            pinView = [pinView initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+        }
+        
+        return pinView;
+    }
+    
+    return nil;
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    //These options will launch a hybrid map with superimposed traffic information that provides walking directions
+    NSDictionary *mapOptions = @{
+                   MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeWalking,
+                   MKLaunchOptionsMapTypeKey:[NSNumber numberWithInteger:MKMapTypeHybrid],
+                   MKLaunchOptionsShowsTrafficKey:@"YES"
+                   };
+    
+    Class itemClass = [MKMapItem class];
+    if (itemClass && [itemClass respondsToSelector:@selector(openMapsWithItems:launchOptions:)]) {
+        
+        //Create placemark object, which will be used to create MKMapItem object
+        MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:view.annotation.coordinate addressDictionary:nil];
+        
+        //By default, if one map item is provided, then directions are provided from current location to the map item
+        MKMapItem *destination = [[MKMapItem alloc] initWithPlacemark:placemark];
+        
+        [destination setName:view.annotation.title];
+        
+        NSArray *param = [[NSArray alloc] initWithObjects:destination, nil];
+        
+        //Launch maps
+        if (mapOptions)
+        {
+            [MKMapItem openMapsWithItems:param launchOptions:mapOptions];
+        }
+        
+    }
+    else
+    {
+        UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Directions Unavailable" message:@"Update." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [a show];
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate Methods
@@ -78,16 +164,16 @@
     //Create a CLLocation at UVA's lawn
     CLLocation *reference = [[CLLocation alloc] initWithLatitude:lawnCoordinate.latitude longitude:lawnCoordinate.longitude];
     
-    if ([reference distanceFromLocation:userInitialPosition] > 5000)
+    if ([reference distanceFromLocation:userInitialPosition] > 1600)
     {
-        //If more than 5k from JeffTheater, just zoom the map to the middle of the downtown mall
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 500, 500);
+        //If more than 1 mile from rotunda, just zoom the map to the rotunda
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
         [_mapView setRegion:region animated:YES];
     }
     else //center on their position
     {
         CLLocationCoordinate2D coord = [userInitialPosition coordinate];
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 500, 500);
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 750, 750);
         [_mapView setRegion:region animated:YES];
     }
 }
@@ -98,7 +184,7 @@
     [_locationManager stopUpdatingLocation];
     
     //In this case, just zoom the map to the middle of the UVA Lawn
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 500, 500);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
     [_mapView setRegion:region animated:YES];
 }
 
@@ -108,7 +194,7 @@
     if (status == kCLAuthorizationStatusDenied)
     {
         [_mapView setShowsUserLocation:NO];
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 500, 500);
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
         [_mapView setRegion:region animated:YES];
     }
     else if (status == kCLAuthorizationStatusAuthorizedWhenInUse)

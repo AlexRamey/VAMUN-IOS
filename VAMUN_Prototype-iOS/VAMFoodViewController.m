@@ -138,7 +138,7 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [_tableView dequeueReusableCellWithIdentifier:FOOD_CELL];
-    cell.backgroundColor = [UIColor UVAWhite];
+    cell.backgroundColor = [UIColor whiteColor];
     
     VAMFoodVenue *venue = nil;
     

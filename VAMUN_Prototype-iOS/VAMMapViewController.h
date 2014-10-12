@@ -13,4 +13,6 @@
 
 @interface VAMMapViewController : VAMContentViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
+@property (nonatomic, strong) NSArray *buildingAnnotations;
+
 @end

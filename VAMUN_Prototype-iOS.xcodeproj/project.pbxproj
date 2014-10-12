@@ -51,6 +51,9 @@
 		D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940019E9902F00B09260 /* VAMTwitterCard.m */; };
 		D0F5940319E9AA2200B09260 /* FoodVenue.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5940219E9AA2200B09260 /* FoodVenue.json */; };
 		D0F5940619E9BF0A00B09260 /* VAMFoodVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940519E9BF0A00B09260 /* VAMFoodVenue.m */; };
+		D0F5940C19EA36E100B09260 /* VAMAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940B19EA36E100B09260 /* VAMAnnotationView.m */; };
+		D0F5940F19EA37AB00B09260 /* VAMBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940E19EA37AB00B09260 /* VAMBuilding.m */; };
+		D0F5941119EA3F5E00B09260 /* UVABuilding.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5941019EA3F5E00B09260 /* UVABuilding.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,11 @@
 		D0F5940219E9AA2200B09260 /* FoodVenue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FoodVenue.json; sourceTree = "<group>"; };
 		D0F5940419E9BF0A00B09260 /* VAMFoodVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMFoodVenue.h; sourceTree = "<group>"; };
 		D0F5940519E9BF0A00B09260 /* VAMFoodVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMFoodVenue.m; sourceTree = "<group>"; };
+		D0F5940A19EA36E100B09260 /* VAMAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMAnnotationView.h; sourceTree = "<group>"; };
+		D0F5940B19EA36E100B09260 /* VAMAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMAnnotationView.m; sourceTree = "<group>"; };
+		D0F5940D19EA37AB00B09260 /* VAMBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMBuilding.h; sourceTree = "<group>"; };
+		D0F5940E19EA37AB00B09260 /* VAMBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMBuilding.m; sourceTree = "<group>"; };
+		D0F5941019EA3F5E00B09260 /* UVABuilding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UVABuilding.json; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -230,6 +238,7 @@
 		D0BB7FBD19A7CEA30025F85E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0F5941019EA3F5E00B09260 /* UVABuilding.json */,
 				D0F5940219E9AA2200B09260 /* FoodVenue.json */,
 				D0BB7FBE19A7CEA30025F85E /* VAMUN_Prototype-iOS-Info.plist */,
 				D0BB7FBF19A7CEA30025F85E /* InfoPlist.strings */,
@@ -297,6 +306,10 @@
 			children = (
 				D0BB7FFF19A8FCD50025F85E /* VAMMapViewController.h */,
 				D0BB800019A8FCD50025F85E /* VAMMapViewController.m */,
+				D0F5940D19EA37AB00B09260 /* VAMBuilding.h */,
+				D0F5940E19EA37AB00B09260 /* VAMBuilding.m */,
+				D0F5940A19EA36E100B09260 /* VAMAnnotationView.h */,
+				D0F5940B19EA36E100B09260 /* VAMAnnotationView.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -472,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BB7FFD19A8FBF50025F85E /* Map_Storyboard.storyboard in Resources */,
+				D0F5941119EA3F5E00B09260 /* UVABuilding.json in Resources */,
 				D0BB801019A906BD0025F85E /* Food_Storyboard.storyboard in Resources */,
 				D0BB800819A906510025F85E /* Merchandise_Storyboard.storyboard in Resources */,
 				D0BB7FF619A7DDB30025F85E /* VAMLeftViewController.xib in Resources */,
@@ -552,7 +566,9 @@
 				D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */,
 				D0BB801319A908A80025F85E /* VAMHomeViewController.m in Sources */,
 				D0BB802219A909130025F85E /* VAMWebViewController.m in Sources */,
+				D0F5940C19EA36E100B09260 /* VAMAnnotationView.m in Sources */,
 				D0F5940619E9BF0A00B09260 /* VAMFoodVenue.m in Sources */,
+				D0F5940F19EA37AB00B09260 /* VAMBuilding.m in Sources */,
 				D0BB801C19A908E60025F85E /* VAMMerchandiseViewController.m in Sources */,
 				D0BB7FED19A7DA850025F85E /* VAMContentViewController.m in Sources */,
 				D0BB801919A908CE0025F85E /* VAMFoodViewController.m in Sources */,

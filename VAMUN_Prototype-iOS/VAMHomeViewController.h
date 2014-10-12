@@ -16,5 +16,6 @@
 
 @property (nonatomic, strong) NSArray *twitterCards;
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

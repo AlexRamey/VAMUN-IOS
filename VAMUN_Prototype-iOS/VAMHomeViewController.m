@@ -30,6 +30,7 @@
 
 -(void)reloadTweets
 {
+    [_activityIndicator startAnimating];
     [[VAMTwitterClient sharedClient] fetchTweetsWithCompletion:^(NSArray *result, NSError *error) {
         if (result)
         {
@@ -57,6 +58,8 @@
         {
             NSLog(@"Fail");
         }
+        
+        [_activityIndicator stopAnimating];
     }];
 }
 

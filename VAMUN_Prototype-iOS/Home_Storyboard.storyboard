@@ -33,8 +33,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snc-pW-65a">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Snc-pW-65a">
                                 <rect key="frame" x="0.0" y="234" width="320" height="334"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="49j-OY-aTa">
+                                        <rect key="frame" x="142" y="148" width="37" height="37"/>
+                                        <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rotunda_image" translatesAutoresizingMaskIntoConstraints="NO" id="LEF-Ch-c5g">
@@ -66,6 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="hHH-H1-1TH"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="49j-OY-aTa" id="vfJ-2N-SgL"/>
                         <outlet property="scrollView" destination="Snc-pW-65a" id="dTJ-XX-g1s"/>
                     </connections>
                 </viewController>
