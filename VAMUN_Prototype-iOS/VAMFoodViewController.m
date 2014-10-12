@@ -152,7 +152,7 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
     }
     
     UILabel *titleLabel = nil;
-    UILabel *descriptionLabel = nil;
+    UITextView *descriptionTextView = nil;
     for (UIView *view in cell.contentView.subviews)
     {
         if ([view class] == [UILabel class])
@@ -161,29 +161,23 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
         }
         else
         {
-            //scroll view
-            for (UIView *v in view.subviews)
-            {
-                if ([v class] == [UILabel class])
-                {
-                    descriptionLabel = (UILabel *)v;
-                }
-            }
+            descriptionTextView = (UITextView *)view;
         }
     }
     
     titleLabel.text = venue.title;
     
     NSMutableString *detailInfo = [[NSMutableString alloc] init];
-    if (venue.hours && [venue.hours caseInsensitiveCompare:@""] != NSOrderedSame)
-    {
-        [detailInfo appendString:venue.hours];
-        [detailInfo appendString:@"\n\n"];
-    }
     
     if (venue.address && [venue.address caseInsensitiveCompare:@""] != NSOrderedSame)
     {
         [detailInfo appendString:venue.address];
+        [detailInfo appendString:@"\n\n"];
+    }
+    
+    if (venue.hours && [venue.hours caseInsensitiveCompare:@""] != NSOrderedSame)
+    {
+        [detailInfo appendString:venue.hours];
         [detailInfo appendString:@"\n\n"];
     }
     
@@ -198,7 +192,7 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
         [detailInfo appendString:venue.venueDescription];
     }
     
-    descriptionLabel.text = detailInfo;
+    descriptionTextView.text = detailInfo;
     
     return cell;
 }

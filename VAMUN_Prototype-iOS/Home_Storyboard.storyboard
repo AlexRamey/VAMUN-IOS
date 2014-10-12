@@ -70,7 +70,13 @@
                             <constraint firstItem="Snc-pW-65a" firstAttribute="top" secondItem="OCx-tO-ers" secondAttribute="bottom" constant="6" id="yKd-SK-dsI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="hHH-H1-1TH"/>
+                    <navigationItem key="navigationItem" title="Home" id="hHH-H1-1TH">
+                        <barButtonItem key="rightBarButtonItem" title="Schedule" id="HPK-cA-Y1T">
+                            <connections>
+                                <segue destination="X2v-Wl-D8s" kind="push" id="mdS-pC-Utt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="49j-OY-aTa" id="vfJ-2N-SgL"/>
                         <outlet property="scrollView" destination="Snc-pW-65a" id="dTJ-XX-g1s"/>
@@ -79,6 +85,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjQ-te-qjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="60" y="-81"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="NGb-ra-kH0">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="X2v-Wl-D8s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F9Y-12-5kC"/>
+                        <viewControllerLayoutGuide type="bottom" id="IWR-eX-hYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S2d-Fd-gzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" indicatorStyle="black" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoI-2H-TuQ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Thursday, November 6, 2014
+
+7:00pm - 9:00pm: Registration
+
+Friday, November 7, 2014
+
+10:00am - 4:00pm: Registration 
+1:00pm - 2:00pm: Delegate Workshops (Session I) 
+2:00pm - 3:00pm: Delegate Workshops (Session II) 
+3:30pm - 4:45pm: Opening Ceremonies 
+4:45pm - 6:30pm : Dinner Break 
+6:30pm - 9:30pm: Committee Session I
+
+Saturday, November 8, 2014
+
+10:00am - 1:00pm: Committee Session II 
+1:00pm - 3:00pm: Lunch 
+Break 
+3:00pm - 6:00pm: Committee Session III 
+6:00pm - 9:00pm: Dinner Break 
+9:00pm - 11:30pm: Delegate Dance
+
+Sunday, November 9, 2014
+
+9:00am - 11:00am: Committee Session IV 
+11:30am - 12:30pm: Closing Ceremonies 
+
+Note: Schedule is subject to minor changes.</mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule" id="nvv-GU-QFm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6w-ft-lFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="-81"/>
         </scene>
     </scenes>
     <resources>

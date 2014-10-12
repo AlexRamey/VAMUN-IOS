@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="39A-kq-Egf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -33,12 +32,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="150" placeholderIntrinsicHeight="105" image="charity_water" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-H8-3fa">
-                                <rect key="frame" x="85" y="64" width="150" height="105"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Vvx-H8-3fa" secondAttribute="height" multiplier="10:7" id="S9X-3V-yJl"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="325" placeholderIntrinsicHeight="391" indicatorStyle="white" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-cF-fIb">
                                 <rect key="frame" x="-2" y="177" width="325" height="391"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,7 +50,7 @@ Box 400435
 Newcomb Hall Station
 Charlottesville, VA 22904-4435.</string>
                                         <attributes>
-                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="15" name="HelveticaNeue-Light"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -65,12 +58,15 @@ Charlottesville, VA 22904-4435.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="105" placeholderIntrinsicHeight="94" image="charity_water" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-H8-3fa">
+                                <rect key="frame" x="108" y="75" width="105" height="94"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hRl-cF-fIb" firstAttribute="top" secondItem="Vvx-H8-3fa" secondAttribute="bottom" constant="8" id="4Lz-IJ-F5b"/>
+                            <constraint firstItem="hRl-cF-fIb" firstAttribute="top" secondItem="Vvx-H8-3fa" secondAttribute="bottom" constant="8" id="48T-1S-5nc"/>
                             <constraint firstItem="hRl-cF-fIb" firstAttribute="leading" secondItem="RW6-zt-X30" secondAttribute="leadingMargin" constant="-18" id="BFb-VR-oRL"/>
-                            <constraint firstItem="Vvx-H8-3fa" firstAttribute="top" secondItem="GL2-1l-Jj6" secondAttribute="bottom" id="YST-0F-UyE"/>
+                            <constraint firstItem="Vvx-H8-3fa" firstAttribute="top" secondItem="GL2-1l-Jj6" secondAttribute="bottom" constant="11" id="E4c-QJ-l4q"/>
                             <constraint firstAttribute="centerX" secondItem="Vvx-H8-3fa" secondAttribute="centerX" id="ZUN-Ik-FUK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hRl-cF-fIb" secondAttribute="trailing" constant="-19" id="dbS-aA-cRh"/>
                             <constraint firstItem="WMd-im-PwY" firstAttribute="top" secondItem="hRl-cF-fIb" secondAttribute="bottom" id="zRb-2B-WgZ"/>

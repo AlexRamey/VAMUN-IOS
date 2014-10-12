@@ -13,43 +13,32 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pJ2-bz-Tv5" id="vHB-Iz-kqV">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-tc-zoU">
-                        <rect key="frame" x="0.0" y="48" width="320" height="103"/>
-                        <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="92" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSM-2Y-ufo">
-                                <rect key="frame" x="8" y="10" width="304" height="92"/>
-                                <string key="text">Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description Hours, Address, Phone Description</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="aSM-2Y-ufo" firstAttribute="top" secondItem="qbf-tc-zoU" secondAttribute="top" constant="10" id="2Cy-2z-aqD"/>
-                            <constraint firstItem="aSM-2Y-ufo" firstAttribute="leading" secondItem="qbf-tc-zoU" secondAttribute="leading" constant="8" id="BD6-Ku-C0w"/>
-                            <constraint firstAttribute="trailing" secondItem="aSM-2Y-ufo" secondAttribute="trailing" constant="8" id="oEv-Kj-4nZ"/>
-                            <constraint firstAttribute="bottom" secondItem="aSM-2Y-ufo" secondAttribute="bottom" constant="8" id="vxy-QG-TJU"/>
-                        </constraints>
-                    </scrollView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="304" placeholderIntrinsicHeight="21" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="GHT-EA-XXR">
                         <rect key="frame" x="8" y="14" width="304" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuY-iH-Ejb">
+                        <rect key="frame" x="0.0" y="43" width="320" height="107"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                    </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="qbf-tc-zoU" secondAttribute="trailing" constant="-8" id="1Y1-dJ-l5S"/>
                     <constraint firstAttribute="trailingMargin" secondItem="GHT-EA-XXR" secondAttribute="trailing" id="2vw-py-CKd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GuY-iH-Ejb" secondAttribute="trailing" constant="-8" id="5VJ-x1-Wbb"/>
                     <constraint firstItem="GHT-EA-XXR" firstAttribute="top" secondItem="vHB-Iz-kqV" secondAttribute="topMargin" constant="6" id="7yd-Ed-ppr"/>
-                    <constraint firstItem="qbf-tc-zoU" firstAttribute="leading" secondItem="vHB-Iz-kqV" secondAttribute="leadingMargin" constant="-8" id="8IQ-lN-BsT"/>
-                    <constraint firstItem="qbf-tc-zoU" firstAttribute="top" secondItem="GHT-EA-XXR" secondAttribute="bottom" constant="13" id="GBJ-4q-Ddi"/>
+                    <constraint firstItem="GuY-iH-Ejb" firstAttribute="leading" secondItem="vHB-Iz-kqV" secondAttribute="leadingMargin" constant="-8" id="Cfu-pl-OhB"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="GuY-iH-Ejb" secondAttribute="bottom" constant="-9" id="LrI-Ds-7qb"/>
                     <constraint firstItem="GHT-EA-XXR" firstAttribute="leading" secondItem="vHB-Iz-kqV" secondAttribute="leadingMargin" id="ZyT-ck-k6Z"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="qbf-tc-zoU" secondAttribute="bottom" constant="-10" id="aI8-Ol-vmC"/>
-                    <constraint firstItem="GHT-EA-XXR" firstAttribute="width" secondItem="aSM-2Y-ufo" secondAttribute="width" id="lQd-fI-rfU"/>
+                    <constraint firstItem="GuY-iH-Ejb" firstAttribute="top" secondItem="GHT-EA-XXR" secondAttribute="bottom" constant="8" id="owD-Of-adF"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="6" y="47"/>
+            <point key="canvasLocation" x="6" y="43"/>
         </tableViewCell>
     </objects>
 </document>

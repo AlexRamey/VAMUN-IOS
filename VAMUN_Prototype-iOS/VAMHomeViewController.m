@@ -23,7 +23,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        
     }
     return self;
 }
@@ -65,6 +64,11 @@
 
 -(void)reloadViews
 {
+    for (UIView *v in _scrollView.subviews)
+    {
+        [v removeFromSuperview];
+    }
+    
     for (VAMTwitterCard *card in _twitterCards)
     {
         [_scrollView addSubview:card];
