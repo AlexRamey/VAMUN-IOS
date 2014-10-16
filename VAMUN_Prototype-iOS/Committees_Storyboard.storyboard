@@ -166,7 +166,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-S8-HbW" customClass="VAMRoomButton">
                                         <rect key="frame" x="125" y="389" width="170" height="30"/>
-                                        <state key="normal" title="Brown 342">
+                                        <state key="normal" title="Nau 342">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>

@@ -23,7 +23,7 @@
         <!--Merchandise-->
         <scene sceneID="FW6-ev-8Ft">
             <objects>
-                <viewController id="tV8-p0-HsQ" customClass="VAMMerchandiseViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tV8-p0-HsQ" customClass="VAMMerchandiseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kSL-aJ-gJu"/>
                         <viewControllerLayoutGuide type="bottom" id="faD-dg-hcN"/>
@@ -34,6 +34,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-Rm-Ehf">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -45,6 +46,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Merchandise" id="deQ-WI-8ZM"/>
+                    <connections>
+                        <outlet property="scrollView" destination="nFX-Rm-Ehf" id="imB-S5-YQ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vzi-be-aE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

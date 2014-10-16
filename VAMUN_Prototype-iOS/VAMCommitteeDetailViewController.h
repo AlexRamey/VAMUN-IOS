@@ -14,7 +14,9 @@
 @property (nonatomic, strong) NSString *imageURL;
 @property (nonatomic, strong) NSString *chairName;
 @property (nonatomic, strong) NSString *topics;
-@property (nonatomic, strong) NSString *rooms;
+@property (nonatomic, strong) NSString *room1info;
+@property (nonatomic, strong) NSString *room2info;
+@property (nonatomic, strong) NSString *room3info;
 
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIImageView *chairPicture;

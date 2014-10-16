@@ -209,7 +209,6 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
         vc.imageURL = _chairImageURLs[committeeIndex];
         vc.chairName = _chairNames[committeeIndex];
         vc.topics = _topicStrings[committeeIndex];
-        vc.rooms = @"Friday: ROOM 1\nSaturday: ROOM 2\nSunday: ROOM 3";
         vc.committeeName = committeeTitle;
     }
     

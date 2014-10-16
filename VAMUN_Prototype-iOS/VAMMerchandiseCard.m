@@ -10,6 +10,26 @@
 
 @implementation VAMMerchandiseCard
 
+-(id)initWithImage:(UIImage *)image info:(NSString *)info offset:(CGFloat)offset callback:(id<MerchandiseCallback>)callback
+{
+    // Initialization code
+    NSArray *nibContents = [[NSBundle mainBundle] loadNibNamed:@"VAMMerchandiseCard"
+                                                         owner:self
+                                                       options:nil];
+    
+    self = [nibContents objectAtIndex:0];
+    
+    self.frame = CGRectMake(0.0, offset, [UIScreen mainScreen].bounds.size.width, 120);
+    
+    [callback merchandiseCardCreatedWithHeight:120];
+    
+    _merchandisePicture.image = image;
+    _merchandiseLabel.text = info;
+    
+    return self;
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

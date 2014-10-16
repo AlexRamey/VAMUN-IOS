@@ -7,7 +7,17 @@
 //
 
 #import "VAMContentViewController.h"
+#import "VAMMerchandiseCard.h"
 
-@interface VAMMerchandiseViewController : VAMContentViewController
+@interface VAMMerchandiseViewController : VAMContentViewController <MerchandiseCallback>
+{
+    CGFloat yOffset;
+    NSArray *merchandiseImageNames;
+    NSArray *merchandiseInfo;
+}
+
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+
+
 
 @end

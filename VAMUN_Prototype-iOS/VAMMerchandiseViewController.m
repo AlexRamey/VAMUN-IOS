@@ -21,6 +21,9 @@
     if (self)
     {
         //custom initialization
+        yOffset = 0;
+        merchandiseInfo = @[@"Sunglasses - $5", @"Cups - $5"];
+        merchandiseImageNames = @[@"vamun_merch_sunglasses", @"vamun_merch_cup"];
     }
     
     return self;
@@ -30,12 +33,33 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    for (int i = 0; i < [merchandiseInfo count]; i++)
+    {
+        [_scrollView addSubview:[[VAMMerchandiseCard alloc] initWithImage:[UIImage imageNamed:merchandiseImageNames[i]] info:merchandiseInfo[i] offset:yOffset callback:self]];
+    }
+    for (int i = 0; i < [merchandiseInfo count]; i++)
+    {
+        [_scrollView addSubview:[[VAMMerchandiseCard alloc] initWithImage:[UIImage imageNamed:merchandiseImageNames[i]] info:merchandiseInfo[i] offset:yOffset callback:self]];
+    }
+    for (int i = 0; i < [merchandiseInfo count]; i++)
+    {
+        [_scrollView addSubview:[[VAMMerchandiseCard alloc] initWithImage:[UIImage imageNamed:merchandiseImageNames[i]] info:merchandiseInfo[i] offset:yOffset callback:self]];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MerchandiseCallback Protocol Methods
+
+-(void)merchandiseCardCreatedWithHeight:(CGFloat)height
+{
+    yOffset += height + 10;
+    [_scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, yOffset)];
 }
 
 /*
