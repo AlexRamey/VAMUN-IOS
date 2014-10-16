@@ -14,5 +14,9 @@
 @interface VAMMapViewController : VAMContentViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) NSArray *buildingAnnotations;
+@property (nonatomic, strong) IBOutlet UIButton *centerUserBtn;
+@property (nonatomic, strong) IBOutlet UIButton *centerRotundaBtn;
+
+-(void)spotlightMarkerWithTitleContainedIn:(NSString *)string;
 
 @end

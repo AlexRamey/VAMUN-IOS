@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iaU-GG-aFu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -44,20 +45,52 @@
                                     <constraint firstAttribute="height" constant="20" id="bRL-al-4xQ"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-bH-d1S">
+                                <rect key="frame" x="5" y="69" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0FA-xg-ebz"/>
+                                    <constraint firstAttribute="height" constant="60" id="E02-UO-zwy"/>
+                                </constraints>
+                                <state key="normal" image="center_rotunda">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMap:" destination="ilq-Zj-aWa" eventType="touchUpInside" id="a42-8t-1oR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SI-Qg-f98">
+                                <rect key="frame" x="255" y="69" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Row-jg-U1g"/>
+                                    <constraint firstAttribute="height" constant="60" id="vKL-92-6PX"/>
+                                </constraints>
+                                <state key="normal" image="center_map_user">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerMap:" destination="ilq-Zj-aWa" eventType="touchUpInside" id="DL6-tc-tkh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="dg3-pE-zB5" secondAttribute="trailing" id="0PB-DW-PSR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0SI-Qg-f98" secondAttribute="trailing" constant="-11" id="2Dw-DP-Qab"/>
+                            <constraint firstItem="0SI-Qg-f98" firstAttribute="top" secondItem="vNJ-5G-frs" secondAttribute="bottom" constant="5" id="6KH-W3-rZ5"/>
+                            <constraint firstItem="jpE-bH-d1S" firstAttribute="top" secondItem="vNJ-5G-frs" secondAttribute="bottom" constant="5" id="Hxm-s7-EGi"/>
                             <constraint firstItem="dg3-pE-zB5" firstAttribute="top" secondItem="vNJ-5G-frs" secondAttribute="bottom" id="K9E-F8-W9G"/>
                             <constraint firstItem="dg3-pE-zB5" firstAttribute="leading" secondItem="7OP-5c-I1J" secondAttribute="leading" id="Khn-eQ-303"/>
                             <constraint firstItem="dg3-pE-zB5" firstAttribute="centerY" secondItem="1og-hj-UQh" secondAttribute="centerY" id="NTt-kT-BYH"/>
                             <constraint firstItem="dg3-pE-zB5" firstAttribute="centerX" secondItem="1og-hj-UQh" secondAttribute="centerX" id="Z8O-EJ-EeB"/>
+                            <constraint firstItem="jpE-bH-d1S" firstAttribute="leading" secondItem="7OP-5c-I1J" secondAttribute="leadingMargin" constant="-11" id="eHd-ZU-hzK"/>
                             <constraint firstItem="2ev-50-fey" firstAttribute="top" secondItem="dg3-pE-zB5" secondAttribute="bottom" id="g9s-fD-ara"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="KwP-yZ-Kvp"/>
                     <connections>
                         <outlet property="activityIndicator" destination="1og-hj-UQh" id="j6M-2I-hmV"/>
+                        <outlet property="centerRotundaBtn" destination="jpE-bH-d1S" id="HK8-b8-Oy2"/>
+                        <outlet property="centerUserBtn" destination="0SI-Qg-f98" id="S9V-rK-ubd"/>
                         <outlet property="mapView" destination="dg3-pE-zB5" id="8I0-WC-tRd"/>
                     </connections>
                 </viewController>
@@ -66,6 +99,10 @@
             <point key="canvasLocation" x="400" y="-101"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="center_map_user" width="48" height="48"/>
+        <image name="center_rotunda" width="48" height="48"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -16,10 +16,13 @@
 @property (nonatomic, strong) NSString *topics;
 @property (nonatomic, strong) NSString *rooms;
 
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIImageView *chairPicture;
 @property (nonatomic, weak) IBOutlet UILabel *chairLabel;
 @property (nonatomic, weak) IBOutlet UILabel *topicLabel;
-@property (nonatomic, weak) IBOutlet UILabel *roomLabel;
+@property (nonatomic, weak) IBOutlet UIButton *room1;
+@property (nonatomic, weak) IBOutlet UIButton *room2;
+@property (nonatomic, weak) IBOutlet UIButton *room3;
 
 
 @end

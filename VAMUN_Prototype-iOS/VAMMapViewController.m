@@ -151,6 +151,26 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     }
 }
 
+-(void)spotlightMarkerWithTitleContainedIn:(NSString *)string
+{
+    NSArray *annotations = [_mapView annotations];
+    for (VAMBuilding *b in annotations)
+    {
+        //MKUserLocation (Blue Dot) is an annotation on which .parseObjectID is an unrecognized selector
+        if ([b class] != [VAMBuilding class])
+        {
+            continue;
+        }
+        
+        if ([string containsString:b.title])
+        {
+            [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 50, 50) animated:YES];
+            [_mapView selectAnnotation:b animated:YES];
+            break;
+        }
+    }
+}
+
 #pragma mark - CLLocationManagerDelegate Methods
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -206,6 +226,23 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     else
     {
         //do nothing
+    }
+}
+
+-(IBAction)centerMap:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    
+    if (btn.frame.origin.x == _centerUserBtn.frame.origin.x)
+    {
+        if ([_mapView userLocation])
+        {
+            [_mapView setCenterCoordinate:[[[_mapView userLocation] location] coordinate] animated:YES];
+        }
+    }
+    else
+    {
+        [_mapView setCenterCoordinate:lawnCoordinate animated:YES];
     }
 }
 

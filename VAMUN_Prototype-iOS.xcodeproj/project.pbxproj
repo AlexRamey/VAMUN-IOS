@@ -54,6 +54,7 @@
 		D0F5940C19EA36E100B09260 /* VAMAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940B19EA36E100B09260 /* VAMAnnotationView.m */; };
 		D0F5940F19EA37AB00B09260 /* VAMBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940E19EA37AB00B09260 /* VAMBuilding.m */; };
 		D0F5941119EA3F5E00B09260 /* UVABuilding.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5941019EA3F5E00B09260 /* UVABuilding.json */; };
+		D0F5946419EF4C5C00B09260 /* VAMRoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,8 @@
 		D0F5940D19EA37AB00B09260 /* VAMBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMBuilding.h; sourceTree = "<group>"; };
 		D0F5940E19EA37AB00B09260 /* VAMBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMBuilding.m; sourceTree = "<group>"; };
 		D0F5941019EA3F5E00B09260 /* UVABuilding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UVABuilding.json; sourceTree = "<group>"; };
+		D0F5946219EF4C5C00B09260 /* VAMRoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMRoomButton.h; sourceTree = "<group>"; };
+		D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMRoomButton.m; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -335,6 +338,8 @@
 				D0BB801519A908BC0025F85E /* VAMCommitteesViewController.m */,
 				D05F3D2419D1C46300BBA0F4 /* VAMCommitteeDetailViewController.h */,
 				D05F3D2519D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m */,
+				D0F5946219EF4C5C00B09260 /* VAMRoomButton.h */,
+				D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */,
 			);
 			name = Committees;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				D0BB801619A908BC0025F85E /* VAMCommitteesViewController.m in Sources */,
 				D0BB7FF519A7DDB30025F85E /* VAMLeftViewController.m in Sources */,
 				D0AFD47419AEC07D00D0716B /* VAMVoidController.m in Sources */,
+				D0F5946419EF4C5C00B09260 /* VAMRoomButton.m in Sources */,
 				D0BB7FC719A7CEA30025F85E /* VAMAppDelegate.m in Sources */,
 				D0AFD47319AEC07D00D0716B /* VAMControllerStore.m in Sources */,
 				D0F5940119E9902F00B09260 /* VAMTwitterCard.m in Sources */,

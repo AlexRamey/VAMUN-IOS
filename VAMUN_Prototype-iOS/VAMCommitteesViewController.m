@@ -94,7 +94,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                           @"Topic 1: Proper Presentation of Artists’ Work\n\nTopic 2: Eliminating Entrance Fees\nTopic 3: Museum Censorship of Art During the Vietnam War",
                           @"Topic 1: Disappearing Languages\n\nTopic 2: Cultural Artifacts Trafficking", //10
                           @"",
-                          @"Topic 1: Biological Warfare in the 21st Century\n\nTopic 2: Disease Outbreak Mitigation in a Globalized Community\nTopic 3: Disease Prevention in a Globalized Community",
+                          @"Topic 1: Biological Warfare in the 21st Century\n\nTopic 2: Disease Outbreak Mitigation in a Globalized Community\n\nTopic 3: Disease Prevention in a Globalized Community",
                           @"",
                           @"",
                           @"",

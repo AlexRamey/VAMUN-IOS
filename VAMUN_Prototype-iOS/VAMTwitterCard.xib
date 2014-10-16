@@ -61,7 +61,7 @@
                 <outlet property="timeLabel" destination="xH4-cg-fQQ" id="Ia4-uT-tDX"/>
                 <outlet property="tweetLabel" destination="bec-nG-PSI" id="jpa-lH-zit"/>
             </connections>
-            <point key="canvasLocation" x="596" y="248"/>
+            <point key="canvasLocation" x="669" y="249"/>
         </view>
     </objects>
 </document>

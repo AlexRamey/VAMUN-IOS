@@ -7,6 +7,7 @@
 //
 
 #import "VAMCommitteeDetailViewController.h"
+#import "VAMMapViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "AFNetworking.h"
 #import "UIColor+Theme.h"
@@ -62,8 +63,8 @@
     //Topics
     _topicLabel.text = _topics;
     
-    //Rooms
-    _roomLabel.text = _rooms;
+    //Rooms --> Set Labels
+    [_scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, _room3.frame.origin.y + _room3.frame.size.height)];
     
     //Nav Bar Config
     
@@ -89,6 +90,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)launchMap:(id)sender
+{
+    UIButton *roomButton = (UIButton *)sender;
+    
+    id<UITableViewDelegate> leftViewController = (id<UITableViewDelegate>)self.wta_zoomNavigationController.leftViewController;
+    
+    
+    NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
+    [leftViewController tableView:nil didSelectRowAtIndexPath:ip];
+
+    UINavigationController *nvc = (UINavigationController *)self.wta_zoomNavigationController.contentViewController;
+    VAMMapViewController *mvc = (VAMMapViewController *)[nvc.viewControllers objectAtIndex:0];
+    [mvc spotlightMarkerWithTitleContainedIn:roomButton.titleLabel.text];
 }
 
 /*

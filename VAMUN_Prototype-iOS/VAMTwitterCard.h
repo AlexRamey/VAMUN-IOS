@@ -27,7 +27,6 @@
 
 @end
 
-//A new protocol named CalendarStoreListener
 @protocol HomeViewCallback <NSObject>
 
 -(void)twitterCardCreatedWithHeight:(CGFloat)height;
