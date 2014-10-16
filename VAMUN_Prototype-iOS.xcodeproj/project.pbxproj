@@ -55,6 +55,8 @@
 		D0F5940F19EA37AB00B09260 /* VAMBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5940E19EA37AB00B09260 /* VAMBuilding.m */; };
 		D0F5941119EA3F5E00B09260 /* UVABuilding.json in Resources */ = {isa = PBXBuildFile; fileRef = D0F5941019EA3F5E00B09260 /* UVABuilding.json */; };
 		D0F5946419EF4C5C00B09260 /* VAMRoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */; };
+		D0F5946719F01DA400B09260 /* VAMMerchandiseCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5946619F01DA400B09260 /* VAMMerchandiseCard.m */; };
+		D0F5946919F01E2400B09260 /* VAMMerchandiseCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F5946819F01E2400B09260 /* VAMMerchandiseCard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,9 @@
 		D0F5941019EA3F5E00B09260 /* UVABuilding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UVABuilding.json; sourceTree = "<group>"; };
 		D0F5946219EF4C5C00B09260 /* VAMRoomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMRoomButton.h; sourceTree = "<group>"; };
 		D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMRoomButton.m; sourceTree = "<group>"; };
+		D0F5946519F01DA400B09260 /* VAMMerchandiseCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMMerchandiseCard.h; sourceTree = "<group>"; };
+		D0F5946619F01DA400B09260 /* VAMMerchandiseCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMMerchandiseCard.m; sourceTree = "<group>"; };
+		D0F5946819F01E2400B09260 /* VAMMerchandiseCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMMerchandiseCard.xib; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -361,6 +366,9 @@
 			children = (
 				D0BB801A19A908E60025F85E /* VAMMerchandiseViewController.h */,
 				D0BB801B19A908E60025F85E /* VAMMerchandiseViewController.m */,
+				D0F5946519F01DA400B09260 /* VAMMerchandiseCard.h */,
+				D0F5946619F01DA400B09260 /* VAMMerchandiseCard.m */,
+				D0F5946819F01E2400B09260 /* VAMMerchandiseCard.xib */,
 			);
 			name = Merchandise;
 			sourceTree = "<group>";
@@ -497,6 +505,7 @@
 				D0BB800A19A9065E0025F85E /* Charity_Storyboard.storyboard in Resources */,
 				D0BB800419A906300025F85E /* Home_Storyboard.storyboard in Resources */,
 				D0BB800E19A906890025F85E /* Contact_Info_Storyboard.storyboard in Resources */,
+				D0F5946919F01E2400B09260 /* VAMMerchandiseCard.xib in Resources */,
 				D0BB7FC119A7CEA30025F85E /* InfoPlist.strings in Resources */,
 				D0F593FC19E8E46700B09260 /* VAMFoodCell.xib in Resources */,
 				D0F5940319E9AA2200B09260 /* FoodVenue.json in Resources */,
@@ -555,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F5946719F01DA400B09260 /* VAMMerchandiseCard.m in Sources */,
 				D05F3D2619D1C46300BBA0F4 /* VAMCommitteeDetailViewController.m in Sources */,
 				D05F3DA619E220E100BBA0F4 /* VAMTwitterClient.m in Sources */,
 				D0BB7FF919A7E80D0025F85E /* VAMTheme.m in Sources */,

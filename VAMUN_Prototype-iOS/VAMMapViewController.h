@@ -12,6 +12,9 @@
 #import "VAMContentViewController.h"
 
 @interface VAMMapViewController : VAMContentViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+{
+    BOOL mapCenterOnFirstOpenFlag;
+}
 
 @property (nonatomic, strong) NSArray *buildingAnnotations;
 @property (nonatomic, strong) IBOutlet UIButton *centerUserBtn;

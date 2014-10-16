@@ -14,12 +14,15 @@
 
 @implementation VAMMerchandiseViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self = [super initWithCoder:aDecoder];
+    
+    if (self)
+    {
+        //custom initialization
     }
+    
     return self;
 }
 

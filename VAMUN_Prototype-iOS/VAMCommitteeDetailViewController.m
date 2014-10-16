@@ -98,7 +98,6 @@
     
     id<UITableViewDelegate> leftViewController = (id<UITableViewDelegate>)self.wta_zoomNavigationController.leftViewController;
     
-    
     NSIndexPath *ip = [NSIndexPath indexPathForRow:2 inSection:0];
     [leftViewController tableView:nil didSelectRowAtIndexPath:ip];
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7XW-DD-cyt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -30,7 +31,18 @@
                     <view key="view" contentMode="scaleToFill" id="Yxp-cM-Yjf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nFX-Rm-Ehf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nFX-Rm-Ehf" firstAttribute="leading" secondItem="Yxp-cM-Yjf" secondAttribute="leadingMargin" constant="-16" id="X68-71-jpu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nFX-Rm-Ehf" secondAttribute="trailing" constant="-16" id="hO0-k2-0tZ"/>
+                            <constraint firstItem="faD-dg-hcN" firstAttribute="top" secondItem="nFX-Rm-Ehf" secondAttribute="bottom" id="oBe-jH-bPo"/>
+                            <constraint firstItem="nFX-Rm-Ehf" firstAttribute="top" secondItem="kSL-aJ-gJu" secondAttribute="bottom" id="yjE-dT-vfL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Merchandise" id="deQ-WI-8ZM"/>
                 </viewController>

@@ -54,6 +54,8 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
             [buildings addObject:bld];
         }
         _buildingAnnotations = buildings;
+        
+        mapCenterOnFirstOpenFlag = YES;
     }
     
     return self;
@@ -153,6 +155,10 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
 
 -(void)spotlightMarkerWithTitleContainedIn:(NSString *)string
 {
+    mapCenterOnFirstOpenFlag = NO;
+    
+    self.view; //forces the view to be loaded and the annotations to be added in the case that the map hasn't been loaded yet
+    
     NSArray *annotations = [_mapView annotations];
     for (VAMBuilding *b in annotations)
     {
@@ -178,23 +184,26 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     [_activityIndicator stopAnimating];
     [_locationManager stopUpdatingLocation];
     
-    //Get most recent location update
-    CLLocation* userInitialPosition = [locations objectAtIndex:([locations count]-1)];
-    
-    //Create a CLLocation at UVA's lawn
-    CLLocation *reference = [[CLLocation alloc] initWithLatitude:lawnCoordinate.latitude longitude:lawnCoordinate.longitude];
-    
-    if ([reference distanceFromLocation:userInitialPosition] > 1600)
+    if (mapCenterOnFirstOpenFlag)
     {
-        //If more than 1 mile from rotunda, just zoom the map to the rotunda
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-        [_mapView setRegion:region animated:YES];
-    }
-    else //center on their position
-    {
-        CLLocationCoordinate2D coord = [userInitialPosition coordinate];
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 750, 750);
-        [_mapView setRegion:region animated:YES];
+        //Get most recent location update
+        CLLocation* userInitialPosition = [locations objectAtIndex:([locations count]-1)];
+        
+        //Create a CLLocation at UVA's lawn
+        CLLocation *reference = [[CLLocation alloc] initWithLatitude:lawnCoordinate.latitude longitude:lawnCoordinate.longitude];
+        
+        if ([reference distanceFromLocation:userInitialPosition] > 1600)
+        {
+            //If more than 1 mile from rotunda, just zoom the map to the rotunda
+            MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
+            [_mapView setRegion:region animated:YES];
+        }
+        else //center on their position
+        {
+            CLLocationCoordinate2D coord = [userInitialPosition coordinate];
+            MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 750, 750);
+            [_mapView setRegion:region animated:YES];
+        }
     }
 }
 
@@ -204,8 +213,11 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     [_locationManager stopUpdatingLocation];
     
     //In this case, just zoom the map to the middle of the UVA Lawn
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-    [_mapView setRegion:region animated:YES];
+    if (mapCenterOnFirstOpenFlag)
+    {
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
+        [_mapView setRegion:region animated:YES];
+    }
 }
 
 
@@ -214,8 +226,11 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     if (status == kCLAuthorizationStatusDenied)
     {
         [_mapView setShowsUserLocation:NO];
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-        [_mapView setRegion:region animated:YES];
+        if (mapCenterOnFirstOpenFlag)
+        {
+            MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
+            [_mapView setRegion:region animated:YES];
+        }
     }
     else if (status == kCLAuthorizationStatusAuthorizedWhenInUse)
     {
