@@ -57,6 +57,7 @@
 		D0F5946419EF4C5C00B09260 /* VAMRoomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5946319EF4C5C00B09260 /* VAMRoomButton.m */; };
 		D0F5946719F01DA400B09260 /* VAMMerchandiseCard.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5946619F01DA400B09260 /* VAMMerchandiseCard.m */; };
 		D0F5946919F01E2400B09260 /* VAMMerchandiseCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F5946819F01E2400B09260 /* VAMMerchandiseCard.xib */; };
+		D0F5946B1A00773A00B09260 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0F5946A1A00773A00B09260 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		D0F5946519F01DA400B09260 /* VAMMerchandiseCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VAMMerchandiseCard.h; sourceTree = "<group>"; };
 		D0F5946619F01DA400B09260 /* VAMMerchandiseCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VAMMerchandiseCard.m; sourceTree = "<group>"; };
 		D0F5946819F01E2400B09260 /* VAMMerchandiseCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VAMMerchandiseCard.xib; sourceTree = "<group>"; };
+		D0F5946A1A00773A00B09260 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FBFBE12E14D4461DB20BA569 /* libPods-VAMUN_Prototype-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VAMUN_Prototype-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +192,7 @@
 		D0BB7FAA19A7CEA30025F85E = {
 			isa = PBXGroup;
 			children = (
+				D0F5946A1A00773A00B09260 /* Settings.bundle */,
 				D0BB7FBC19A7CEA30025F85E /* VAMUN_Prototype-iOS */,
 				D0BB7FD519A7CEA30025F85E /* VAMUN_Prototype-iOSTests */,
 				D0BB7FB519A7CEA30025F85E /* Frameworks */,
@@ -497,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F5946B1A00773A00B09260 /* Settings.bundle in Resources */,
 				D0BB7FFD19A8FBF50025F85E /* Map_Storyboard.storyboard in Resources */,
 				D0F5941119EA3F5E00B09260 /* UVABuilding.json in Resources */,
 				D0BB801019A906BD0025F85E /* Food_Storyboard.storyboard in Resources */,
