@@ -64,6 +64,10 @@
     _topicLabel.text = _topics;
     
     //Rooms --> Set Labels
+    [_room1 setTitle:_room1info forState:UIControlStateNormal];
+    [_room2 setTitle:_room2info forState:UIControlStateNormal];
+    [_room3 setTitle:_room3info forState:UIControlStateNormal];
+    
     [_scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, _room3.frame.origin.y + _room3.frame.size.height)];
     
     //Nav Bar Config

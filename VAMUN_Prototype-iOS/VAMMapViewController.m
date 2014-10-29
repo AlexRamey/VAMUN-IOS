@@ -155,14 +155,12 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
 
 -(void)spotlightMarkerWithTitleContainedIn:(NSString *)string
 {
-    mapCenterOnFirstOpenFlag = NO;
-    
     self.view = self.view; //forces the view to be loaded and the annotations to be added in the case that the map hasn't been loaded yet
     
     NSArray *annotations = [_mapView annotations];
     for (VAMBuilding *b in annotations)
     {
-        //MKUserLocation (Blue Dot) is an annotation on which .parseObjectID is an unrecognized selector
+        //MKUserLocation (Blue Dot) is an annotation
         if ([b class] != [VAMBuilding class])
         {
             continue;
@@ -172,6 +170,7 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
         {
             [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 50, 50) animated:YES];
             [_mapView selectAnnotation:b animated:YES];
+            mapCenterOnFirstOpenFlag = NO;
             break;
         }
     }
@@ -195,8 +194,21 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
         if ([reference distanceFromLocation:userInitialPosition] > 1600)
         {
             //If more than 1 mile from rotunda, just zoom the map to the rotunda
-            MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-            [_mapView setRegion:region animated:YES];
+            for (VAMBuilding *b in [_mapView annotations])
+            {
+                //MKUserLocation (Blue Dot) is an annotation
+                if ([b class] != [VAMBuilding class])
+                {
+                    continue;
+                }
+                
+                if ([@"Rotunda" caseInsensitiveCompare:b.title] == NSOrderedSame)
+                {
+                    [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 750, 750) animated:YES];
+                    [_mapView selectAnnotation:b animated:YES];
+                    break;
+                }
+            }
         }
         else //center on their position
         {
@@ -215,8 +227,21 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     //In this case, just zoom the map to the middle of the UVA Lawn
     if (mapCenterOnFirstOpenFlag)
     {
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-        [_mapView setRegion:region animated:YES];
+        for (VAMBuilding *b in [_mapView annotations])
+        {
+            //MKUserLocation (Blue Dot) is an annotation
+            if ([b class] != [VAMBuilding class])
+            {
+                continue;
+            }
+            
+            if ([@"Rotunda" caseInsensitiveCompare:b.title] == NSOrderedSame)
+            {
+                [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 750, 750) animated:YES];
+                [_mapView selectAnnotation:b animated:YES];
+                break;
+            }
+        }
     }
 }
 
@@ -228,8 +253,21 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
         [_mapView setShowsUserLocation:NO];
         if (mapCenterOnFirstOpenFlag)
         {
-            MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(lawnCoordinate, 750, 750);
-            [_mapView setRegion:region animated:YES];
+            for (VAMBuilding *b in [_mapView annotations])
+            {
+                //MKUserLocation (Blue Dot) is an annotation
+                if ([b class] != [VAMBuilding class])
+                {
+                    continue;
+                }
+                
+                if ([@"Rotunda" caseInsensitiveCompare:b.title] == NSOrderedSame)
+                {
+                    [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 750, 750) animated:YES];
+                    [_mapView selectAnnotation:b animated:YES];
+                    break;
+                }
+            }
         }
     }
     else if (status == kCLAuthorizationStatusAuthorizedWhenInUse)
@@ -257,7 +295,21 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
     }
     else
     {
-        [_mapView setCenterCoordinate:lawnCoordinate animated:YES];
+        for (VAMBuilding *b in [_mapView annotations])
+        {
+            //MKUserLocation (Blue Dot) is an annotation
+            if ([b class] != [VAMBuilding class])
+            {
+                continue;
+            }
+            
+            if ([@"Rotunda" caseInsensitiveCompare:b.title] == NSOrderedSame)
+            {
+                [_mapView setRegion:MKCoordinateRegionMakeWithDistance(b.coordinate, 750, 750) animated:YES];
+                [_mapView selectAnnotation:b animated:YES];
+                break;
+            }
+        }
     }
 }
 

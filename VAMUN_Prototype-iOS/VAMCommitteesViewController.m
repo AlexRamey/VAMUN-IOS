@@ -108,6 +108,33 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                           @"",
                           @""]; //24
         
+        _roomLocationStrings = @[
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"], //10
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"], //20
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"],
+                                    @[@"Room 1", @"Room 2", @"Room 3"], //24
+                                 ];
+        
     }
     return self;
 }
@@ -210,6 +237,10 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
         vc.chairName = _chairNames[committeeIndex];
         vc.topics = _topicStrings[committeeIndex];
         vc.committeeName = committeeTitle;
+        
+        vc.room1info = [[_roomLocationStrings objectAtIndex:committeeIndex] objectAtIndex:0];
+        vc.room2info = [[_roomLocationStrings objectAtIndex:committeeIndex] objectAtIndex:1];
+        vc.room3info = [[_roomLocationStrings objectAtIndex:committeeIndex] objectAtIndex:2];
     }
     
     // Get the new view controller using [segue destinationViewController].

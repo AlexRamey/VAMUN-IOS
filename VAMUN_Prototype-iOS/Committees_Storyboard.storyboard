@@ -148,7 +148,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="nyZ-g4-Wr6"/>
                                         </constraints>
-                                        <state key="normal" title="Clark 111">
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>

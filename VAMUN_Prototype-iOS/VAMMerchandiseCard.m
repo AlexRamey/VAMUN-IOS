@@ -19,9 +19,9 @@
     
     self = [nibContents objectAtIndex:0];
     
-    self.frame = CGRectMake(0.0, offset, [UIScreen mainScreen].bounds.size.width, 120);
+    self.frame = CGRectMake(0.0, offset, [UIScreen mainScreen].bounds.size.width, 150);
     
-    [callback merchandiseCardCreatedWithHeight:120];
+    [callback merchandiseCardCreatedWithHeight:150];
     
     _merchandisePicture.image = image;
     _merchandiseLabel.text = info;
