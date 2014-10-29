@@ -157,7 +157,7 @@ static NSString * const VAMUN_PIN_IDENTIFIER = @"VAMUN_PIN_IDENTIFIER";
 {
     mapCenterOnFirstOpenFlag = NO;
     
-    self.view; //forces the view to be loaded and the annotations to be added in the case that the map hasn't been loaded yet
+    self.view = self.view; //forces the view to be loaded and the annotations to be added in the case that the map hasn't been loaded yet
     
     NSArray *annotations = [_mapView annotations];
     for (VAMBuilding *b in annotations)
