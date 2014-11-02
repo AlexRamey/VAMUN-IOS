@@ -109,30 +109,30 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                           @""]; //24
         
         _roomLocationStrings = @[
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"], //10
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"], //20
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"],
-                                    @[@"Room 1", @"Room 2", @"Room 3"], //24
+                                    @[@"Maury 209", @"Maury 209", @"Maury 209"],
+                                    @[@"Minor 125", @"Minor 125", @"Minor 125"],
+                                    @[@"Clark 108", @"Clark 108", @"Clark 108"],
+                                    @[@"Maury 115", @"Maury 115", @"Maury 115"],
+                                    @[@"New Cabell 485", @"New Cabell 485", @"New Cabell 485"],
+                                    @[@"New Cabell 315", @"New Cabell 315", @"New Cabell 315"],
+                                    @[@"Newcomb Commonwealth", @"Newcomb Commonwealth", @"Newcomb Commonwealth"],
+                                    @[@"Dell 1 105", @"Dell 1 105", @"Dell 1 105"],
+                                    @[@"Dell 2 102", @"Dell 2 102", @"Dell 2 102"],
+                                    @[@"Dell 2 101", @"Dell 2 101", @"Dell 2 101"], //10
+                                    @[@"New Cabell 058", @"New Cabell 058", @"New Cabell 058"],
+                                    @[@"New Cabell 032", @"New Cabell 032", @"New Cabell 032"],
+                                    @[@"New Cabell 303", @"New Cabell 303", @"New Cabell 303"],
+                                    @[@"New Cabell 027", @"New Cabell 027", @"New Cabell 027"],
+                                    @[@"New Cabell 232", @"New Cabell 232", @"New Cabell 232"],
+                                    @[@"New Cabell 364", @"New Cabell 364", @"New Cabell 364"],
+                                    @[@"New Cabell 283", @"New Cabell 283", @"New Cabell 283"],
+                                    @[@"New Cabell 115", @"New Cabell 115", @"New Cabell 115"],
+                                    @[@"New Cabell 132", @"New Cabell 132", @"New Cabell 132"],
+                                    @[@"New Cabell 191", @"New Cabell 191", @"New Cabell 191"], //20
+                                    @[@"New Cabell 168", @"New Cabell 168", @"New Cabell 168"],
+                                    @[@"New Cabell 187", @"New Cabell 187", @"New Cabell 187"],
+                                    @[@"New Cabell 107", @"New Cabell 107", @"New Cabell 107"],
+                                    @[@"New Cabell 042", @"New Cabell 042", @"New Cabell 042"], //24
                                  ];
         
     }
