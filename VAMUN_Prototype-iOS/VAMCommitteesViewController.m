@@ -89,7 +89,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                           @"Topic 1: Respond to the ethnic unrest in South Sudan\n\nTopic 2: LGBTQ Rights in Uganda",
                           @"Topic 1: The International Political and Economic standing of Taiwan\n\nTopic 2: Migrant Worker Rights",
                           @"Topic 1: Political Structure\n\nTopic 2: Constitution",
-                          @"Topic 1: The EU’s Future Energy Policy\nTopic 2: The Admission of New EU Members",
+                          @"Topic 1: The EU’s Future Energy Policy\nTopic 2: The Admission of New EU Members\n\nLocation: Newcomb Commonwealth Room",
                           @"Topic 1: Rwanda’s Economic Development\n\nTopic 2: Legal Resolutions and Reconciliation",
                           @"Topic 1: Proper Presentation of Artists’ Work\n\nTopic 2: Eliminating Entrance Fees\nTopic 3: Museum Censorship of Art During the Vietnam War",
                           @"Topic 1: Disappearing Languages\n\nTopic 2: Cultural Artifacts Trafficking", //10
@@ -115,7 +115,7 @@ static NSString * const COMMITTEE_CELL = @"COMMITTEE_CELL";
                                     @[@"Maury 115", @"Maury 115", @"Maury 115"],
                                     @[@"New Cabell 485", @"New Cabell 485", @"New Cabell 485"],
                                     @[@"New Cabell 315", @"New Cabell 315", @"New Cabell 315"],
-                                    @[@"Newcomb Commonwealth", @"Newcomb Commonwealth", @"Newcomb Commonwealth"],
+                                    @[@"Newcomb", @"Newcomb", @"Newcomb"],
                                     @[@"Dell 1 105", @"Dell 1 105", @"Dell 1 105"],
                                     @[@"Dell 2 102", @"Dell 2 102", @"Dell 2 102"],
                                     @[@"Dell 2 101", @"Dell 2 101", @"Dell 2 101"], //10

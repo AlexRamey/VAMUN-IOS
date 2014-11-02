@@ -9,7 +9,8 @@
         "isSponsor": true,
         "objectId": "eWq6tu00VU",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T00:44:03.458Z"
+        "updatedAt": "2014-10-09T00:44:03.458Z",
+        "orderNumber" : 1
     },
 	{
         "Address": "Corner of Alderman and McCormick Roads ",
@@ -20,7 +21,8 @@
         "isSponsor": true,
         "objectId": "2BpfiGrPQ5",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:45:02.688Z"
+        "updatedAt": "2014-10-09T00:45:02.688Z",
+        "orderNumber" : 1
     },
 	{
         "Address": "Newcomb Hall, 2nd floor",
@@ -32,7 +34,8 @@
         "isSponsor": false,
         "objectId": "8zKoFWi8Fv",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:45:56.151Z"
+        "updatedAt": "2014-10-09T00:45:56.151Z",
+        "orderNumber" : 2
     },
 	{
         "Address": "Clark Hall Mural Room",
@@ -43,7 +46,8 @@
         "isSponsor": false,
         "objectId": "foBjLtdLm9",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:47:33.631Z"
+        "updatedAt": "2014-10-09T00:47:33.631Z",
+        "orderNumber" : 3
     },
 	{
         "Address": "Newcomb Hall, 2nd floor",
@@ -54,7 +58,8 @@
         "isSponsor": false,
         "objectId": "YbSUqNggfj",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:48:59.330Z"
+        "updatedAt": "2014-10-09T00:48:59.330Z",
+        "orderNumber" : 4
     },
 	{
         "Address": "Newcomb Hall, 1st floor",
@@ -65,7 +70,8 @@
         "isSponsor": false,
         "objectId": "wgf3w3wB0u",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:49:48.440Z"
+        "updatedAt": "2014-10-09T00:49:48.440Z",
+        "orderNumber" : 5
     },
 	{
         "Address": "First Floor of Observatory Hill Dining Hall",
@@ -76,7 +82,8 @@
         "isSponsor": false,
         "objectId": "LM82NJjb4r",
         "onGrounds": true,
-        "updatedAt": "2014-10-09T00:50:41.784Z"
+        "updatedAt": "2014-10-09T00:50:41.784Z",
+        "orderNumber" : 6
     },
 	{
         "Address": "16 Elliewood Ave",
@@ -88,7 +95,8 @@
         "isSponsor": true,
         "objectId": "OxXDQdQ0Ib",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T00:51:27.682Z"
+        "updatedAt": "2014-10-09T00:51:27.682Z",
+        "orderNumber" : 2
     },
 	{
         "Address": "1521 University Avenue ",
@@ -100,7 +108,8 @@
         "isSponsor": false,
         "objectId": "1SGqqKQu9n",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:00:10.396Z"
+        "updatedAt": "2014-10-09T01:00:10.396Z",
+        "orderNumber" : 3
     },
 	{
         "Address": "118 W Main St",
@@ -112,7 +121,8 @@
         "isSponsor": false,
         "objectId": "qZt5lFLapd",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:00:54.381Z"
+        "updatedAt": "2014-10-09T01:00:54.381Z",
+        "orderNumber" : 7
     },
 	{
         "Address": "12 Elliewood Ave",
@@ -124,7 +134,8 @@
         "isSponsor": false,
         "objectId": "dToWUcCq31",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:03:29.806Z"
+        "updatedAt": "2014-10-09T01:03:29.806Z",
+        "orderNumber" : 8
     },
 	{
         "Address": "1400 Wertland St",
@@ -136,7 +147,8 @@
         "isSponsor": false,
         "objectId": "Ty75o8PMOg",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:06:05.810Z"
+        "updatedAt": "2014-10-09T01:06:05.810Z",
+        "orderNumber" : 11
     },
 	{
         "Address": "1517 University Ave",
@@ -145,10 +157,11 @@
         "Phone": "(434) 984-4653",
         "Title": "Poe’s Public House",
         "createdAt": "2014-10-09T01:01:03.841Z",
-        "isSponsor": false,
+        "isSponsor": true,
         "objectId": "xMGje520UY",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:01:41.003Z"
+        "updatedAt": "2014-10-09T01:01:41.003Z",
+        "orderNumber" : 4
     },
 	{
         "Address": "115 Elliewood Ave",
@@ -160,7 +173,21 @@
         "isSponsor": false,
         "objectId": "gI5bKPkcT7",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:03:27.868Z"
+        "updatedAt": "2014-10-09T01:03:27.868Z",
+        "orderNumber" : 5
+    },
+    {
+        "Address": "102 14th St NW",
+        "Description": "Prep-school-themed sports tavern for the UVA set offering TVs, fancy burgers & more.",
+        "Hours": "Everyday 11am - 2 am",
+        "Phone": "(434) 984-5707",
+        "Title": "Boylan Heights",
+        "createdAt": "2014-10-09T01:02:37.259Z",
+        "isSponsor": false,
+        "objectId": "gI5bKPkcQ7",
+        "onGrounds": false,
+        "updatedAt": "2014-10-09T01:03:27.868Z",
+        "orderNumber" : 6
     },
 	{
         "Address": "104 14th St NW",
@@ -172,7 +199,8 @@
         "isSponsor": false,
         "objectId": "mDb8qneQZt",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:04:18.916Z"
+        "updatedAt": "2014-10-09T01:04:18.916Z",
+        "orderNumber" : 9
     },
 	{
         "Address": "104 14th St NW #6",
@@ -184,7 +212,8 @@
         "isSponsor": false,
         "objectId": "aIB8nAYZik",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:05:13.179Z"
+        "updatedAt": "2014-10-09T01:05:13.179Z",
+        "orderNumber" : 10
     },
 	{
         "Address": "11 Elliewood Ave",
@@ -196,7 +225,8 @@
         "isSponsor": false,
         "objectId": "JrGjDFka3A",
         "onGrounds": false,
-        "updatedAt": "2014-10-09T01:07:20.060Z"
+        "updatedAt": "2014-10-09T01:07:20.060Z",
+        "orderNumber" : 12
     },
 	{
         "Address": "1505 University Ave",
@@ -208,7 +238,8 @@
         "isSponsor": false,
         "objectId": "StnFo5XAwI",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:08:28.106Z"
+        "updatedAt": "2014-10-11T03:08:28.106Z",
+        "orderNumber" : 13
     },
 	{
         "Address": "107 Elliewood Ave",
@@ -220,7 +251,8 @@
         "isSponsor": false,
         "objectId": "e2sscyrCo9",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:09:40.270Z"
+        "updatedAt": "2014-10-11T03:09:40.270Z",
+        "orderNumber" : 14
     },
 	{
         "Address": "1601 University Ave",
@@ -232,7 +264,8 @@
         "isSponsor": false,
         "objectId": "GNYU9Yev7d",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:10:39.544Z"
+        "updatedAt": "2014-10-11T03:10:39.544Z",
+        "orderNumber" : 15
     },
 	{
         "Address": "1609 University Ave",
@@ -244,7 +277,8 @@
         "isSponsor": false,
         "objectId": "TVnvXBltqp",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:11:49.616Z"
+        "updatedAt": "2014-10-11T03:11:49.616Z",
+        "orderNumber" : 16
     },
 	{
         "Address": "1427 University Ave",
@@ -256,7 +290,8 @@
         "isSponsor": false,
         "objectId": "GJjJKjNKop",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:12:53.551Z"
+        "updatedAt": "2014-10-11T03:12:53.551Z",
+        "orderNumber" : 17
     },
 	{
         "Address": "1415 University Ave",
@@ -268,7 +303,8 @@
         "isSponsor": false,
         "objectId": "nYdn6XGsev",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:13:42.745Z"
+        "updatedAt": "2014-10-11T03:13:42.745Z",
+        "orderNumber" : 18
     },
 	{
         "Address": "1427 University Avenue",
@@ -280,7 +316,8 @@
         "isSponsor": false,
         "objectId": "luSun3kFWj",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:14:41.566Z"
+        "updatedAt": "2014-10-11T03:14:41.566Z",
+        "orderNumber" : 19
     },
 	{
         "Address": "1309 W Main St",
@@ -292,7 +329,8 @@
         "isSponsor": false,
         "objectId": "ExOsHPKyMV",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:16:58.656Z"
+        "updatedAt": "2014-10-11T03:16:58.656Z",
+        "orderNumber" : 20
     },
 	{
         "Address": "104 14th St NW Suite 3",
@@ -304,7 +342,8 @@
         "isSponsor": false,
         "objectId": "foQKvEcVx5",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:17:01.983Z"
+        "updatedAt": "2014-10-11T03:17:01.983Z",
+        "orderNumber" : 21
     },
 	{
         "Address": "101 14th St",
@@ -316,7 +355,8 @@
         "isSponsor": false,
         "objectId": "RbsWeG3Tcz",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:20:09.170Z"
+        "updatedAt": "2014-10-11T03:20:09.170Z",
+        "orderNumber" : 23
     },
 	{
         "Address": "109 14th St",
@@ -328,7 +368,8 @@
         "isSponsor": false,
         "objectId": "qXhfNHPPYL",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:20:11.831Z"
+        "updatedAt": "2014-10-11T03:20:11.831Z",
+        "orderNumber" : 24
     },
 	{
         "Address": "1331 West Main Street",
@@ -340,7 +381,8 @@
         "isSponsor": false,
         "objectId": "B24BiHWijZ",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:20:17.495Z"
+        "updatedAt": "2014-10-11T03:20:17.495Z",
+        "orderNumber" : 25
     },
 	{
         "Address": "1327 W Main St",
@@ -352,6 +394,7 @@
         "isSponsor": false,
         "objectId": "LSmLHFyR2P",
         "onGrounds": false,
-        "updatedAt": "2014-10-11T03:20:07.050Z"
+        "updatedAt": "2014-10-11T03:20:07.050Z",
+        "orderNumber" : 22
     }
 ] }

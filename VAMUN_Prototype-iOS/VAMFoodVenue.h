@@ -17,5 +17,6 @@
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSNumber *isSponsor;
 @property (nonatomic, strong) NSNumber *isOnGrounds;
+@property (nonatomic, strong) NSNumber *orderNumber;
 
 @end

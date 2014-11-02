@@ -45,6 +45,7 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
             venue.venueDescription = [dictionary objectForKey:@"Description"];
             venue.isSponsor = [NSNumber numberWithBool:[[dictionary objectForKey:@"isSponsor"] boolValue]];
             venue.isOnGrounds = [NSNumber numberWithBool:[[dictionary objectForKey:@"onGrounds"] boolValue]];
+            venue.orderNumber = [dictionary objectForKey:@"orderNumber"];
             
             if ([venue.isOnGrounds boolValue] == YES)
             {
@@ -60,17 +61,17 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
             VAMFoodVenue *venue1 = (VAMFoodVenue *)obj1;
             VAMFoodVenue *venue2 = (VAMFoodVenue *)obj2;
             
-            if ([venue1.isSponsor boolValue] == YES && [venue2.isSponsor boolValue] == NO)
-            {
-                return NSOrderedAscending;
-            }
-            else if ([venue1.isSponsor boolValue] == NO && [venue1.isSponsor boolValue] == YES)
+            if ([venue1.orderNumber intValue] > [venue2.orderNumber intValue])
             {
                 return NSOrderedDescending;
             }
+            else if ([venue1.orderNumber intValue] < [venue2.orderNumber intValue])
+            {
+                return NSOrderedAscending;
+            }
             else
             {
-                return [venue1.title caseInsensitiveCompare:venue2.title];
+                return NSOrderedSame;
             }
         }];
         
@@ -78,17 +79,17 @@ static NSString * const FOOD_CELL = @"FOOD_CELL";
             VAMFoodVenue *venue1 = (VAMFoodVenue *)obj1;
             VAMFoodVenue *venue2 = (VAMFoodVenue *)obj2;
             
-            if ([venue1.isSponsor boolValue] == YES && [venue2.isSponsor boolValue] == NO)
-            {
-                return NSOrderedAscending;
-            }
-            else if ([venue1.isSponsor boolValue] == NO && [venue1.isSponsor boolValue] == YES)
+            if ([venue1.orderNumber intValue] > [venue2.orderNumber intValue])
             {
                 return NSOrderedDescending;
             }
+            else if ([venue1.orderNumber intValue] < [venue2.orderNumber intValue])
+            {
+                return NSOrderedAscending;
+            }
             else
             {
-                return [venue1.title caseInsensitiveCompare:venue2.title];
+                return NSOrderedSame;
             }
         }];
          
